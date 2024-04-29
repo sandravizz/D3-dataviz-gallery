@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Overview of chart templates with d3.js</title>   
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">		
+</head>
+
+<body>
+	
+<div class="container">
+
+		<h1>Overview chart templates | d3.js </h1>
+		
+		<h3>Area chart (color gradient)</h3>
+		<p class ="chart_title">The area chart 
+			is perfect for showing time series data. 
+			The gradient helps to focus on the edges, 
+			which is, where the actual movement is visiable.
+		</p>
+		<div id="chart0"></div> 
+
+		<h3>Bar chart (ranking)</h3>
+		<p class ="chart_title">The bar chart ranked 
+			helps the viewer to understand quickly the 
+			oder of "improtance" and the "magnitud" of 
+			difference between them.
+		</p>
+		<div id="chart1"></div> 
+
+		<h3>Lollipop chart</h3>  
+		<p class ="chart_title">The lollipop chart 
+			emphasis the focus on the single data points. 
+		</p>          
+		<div id="chart3"></div>
+
+		<h3>Bar chart ranking (with tooltip)</h3> 
+		<p class ="chart_title"> This bar chart uses a color code 
+			to indicate when a value is above and when below the 
+			average plus the offer of detailed information through 
+			a tooltip. 
+		</p>	
+		<div id="chart5"></div>
+
+		<h3>Sankey diagram (highlight through hover)</h3>  
+		<p class ="chart_title">The sankey diagram
+			shows ...
+		</p>		
+		<div id="chart2"></div>
+
+		<h3>Scatter plot (update through button click)</h3>  
+		<p class ="chart_title">The scatterplot 
+			shows ...
+		</p>
+		<button id="start" style="position: absolute; margin-left:0px; margin-top:0px;">NEUTRAL</button>
+		<div id="chart4"></div>
+
+		<h3>Histogram</h3>  
+		<p class ="chart_title">The histogram 
+			shows ...
+		</p>
+		<div id="chart6"></div>
+
+		<h3>Hexbin</h3>
+		https://observablehq.com/@sandraviz/audio-features-d3-hexbin-area
+		
+		<h3>Scatter plot (color gradient)</h3>
+		https://observablehq.com/@d3/global-temperature-trends
+		
+		<h3>Calender chart</h3>
+		https://observablehq.com/@d3/calendar/2?collection=@d3/gallery
+
+		<h3>Dot plot</h3>
+		https://observablehq.com/@d3/dot-plot/2?collection=@d3/gallery
+
+		<h3>Chord diagram</h3>
+		https://observablehq.com/@d3/directed-chord-diagram/2?collection=@d3/gallery
+		https://observablehq.com/d/3f80598716a34cbc
+
+		<h3>Arc diagram </h3>
+		https://observablehq.com/@d3/arc-diagram
+
+		<h3>Radial stacked bar chart</h3>
+		https://observablehq.com/@pstuffa/radial-stacked-bar-chart-as-a-function
+
+		<h3>Force layout</h3>
+		https://observablehq.com/@sandraviz/force-directed-layout?collection=@sandraviz/in-love-with-circle
+
+		<h3>Beeswarm</h3>
+		https://observablehq.com/@antonbardera/beeswarm-centres
+
+		<h3>Barcode chart</h3>
+		https://observablehq.com/@sandraviz/barcode-plot
+
+		<h3>Bubble chart</h3>
+		https://observablehq.com/@sandraviz/car_bubble
+
+		<h3>Grouped bar chart</h3>
+		https://observablehq.com/@d3/grouped-bar-chart/2?intent=fork
+
+		<h3>Stacked bar chart</h3>
+		https://observablehq.com/@d3/stacked-bar-chart/2
+
+		<h3>Multiple line chart</h3>
+		https://observablehq.com/@sandraviz/consumption-emission-d3-js-arquero-js
+
+		<h3>Horizon chart</h3>
+		https://observablehq.com/d/b747974e1d353e1d
+
+		<h3>Parallel coordinates (brushable)</h3>
+		https://observablehq.com/d/8c19ef6928777c09
+
+		<h3>Sequence sunburst</h3>
+		https://observablehq.com/d/c94cad181ef734b0
+
+		<h3>Bar race</h3>
+		https://observablehq.com/d/3f23bf2a8368c870
+
+		<h3>World map</h3>
+		https://observablehq.com/d/1b72883c1cc06da3
+
+		<h3>Scatter plot (tour)</h3>
+		https://observablehq.com/d/689b78bf4e76a77d
+
+		<h3>Zoomable area chart</h3>
+		https://observablehq.com/d/1cd7b37fbe3caf28
+
+		<h3>Scatter plot (brushable) </h3>
+		https://observablehq.com/d/1aa04a70ef281a72
+
+		<h3>Scatter plot (small multiple) </h3>
+		https://observablehq.com/d/183c0c44d31e4467
+
+		<h3>Heatmap</h3>
+		https://observablehq.com/d/17e6f8deba1d2557
+
+		<h3>Circular bar chart</h3>
+		https://d3-graph-gallery.com/graph/circular_barplot_double.html
+
+
+
+</div>    
+
+<!-- d3 libaries -->
+<script src="js/d3-sankey.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+<script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+
+<!-- charts -->
+<script src="js/global_variables.js"></script> 
+<script src="js/areachart.js"></script> 
+<script src="js/barchart.js"></script>   
+<script src="js/lollipop.js"></script> 
+<script src="js/sankey.js"></script>  
+<script src="js/scatterplot.js"></script>  
+<script src="js/barchart_vertical.js"></script> 
+<script src="js/histogram.js"></script> 
+
+
+</body>
+</html>
