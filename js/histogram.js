@@ -61,7 +61,7 @@ innerChart6
             .tickValues([0, 0.2, 0.4, 0.6, 0.8, 1])
      	      .tickSize(0)
             .tickFormat(format6)
-            .tickPadding(25));
+            .tickPadding(5));
 
 // --------------------------------------
 //  Data drawing

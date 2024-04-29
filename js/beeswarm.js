@@ -15,7 +15,7 @@ const innerChart7 = svg7
 // --------------------------------------
 
 const data7 = d3.csv("../data/td-més_centres.csv", d3.autoType)
-            .then(function(data7){ 
+                .then(function(data7){ 
 
     let sexe = d3.groups(data7, (d) => d.sexe).map((d) => d[0]);
     let edat = d3.groups(data7, (d) => d.grups_edat).map((d) => d[0]);
@@ -31,8 +31,7 @@ let c = d3
 let r = d3
   .scaleSqrt()
   .domain(d3.extent(data7, (d) => d.visites))
-  .nice()
-  .range([0.5, 10]);
+  .range([0.5, 7]);
 
 let y = d3
   .scaleBand()
@@ -42,7 +41,6 @@ let y = d3
 let x = d3
   .scaleLinear()
   .domain([0, 1300])
-  .nice()
   .range([0, innerwidth]);
 
 // --------------------------------------
@@ -60,20 +58,19 @@ innerChart7
 innerChart7
    .append("g")
    .attr("class", "y-axis")
-   .attr("transform", `translate(0, -10)`)
+   .attr("transform", `translate(0, -15)`)
 	 .call(d3.axisLeft(y)
-		      .ticks(5)
-          .tickPadding(20));
-
+		       .ticks(5)
+           .tickPadding(0));
 
 // --------------------------------------
 //  Simulation
 // --------------------------------------
 
-    const simulation = d3
+  const simulation = d3
     .forceSimulation(data7)
-    .force("x", d3.forceX((d) => x(d.pacients)).strength(0.05))
-    .force("y", d3.forceY((d) => y(d.grups_edat)).strength(1))
+    .force("x", d3.forceX((d) => x(d.pacients)).strength(0.5))
+    .force("y", d3.forceY((d) => y(d.grups_edat)).strength(0.5))
     .force("collide", d3.forceCollide((d) => r(d.visites) + 0.1).strength(1));
 
   for (let i = 0; i < 100; i++) {

@@ -39,8 +39,11 @@ let areaGradient = innerChart0
 // Data loading
 // --------------------------------------
 
-const data0 = d3.csv("../data/home_year.csv", d3.autoType)
+const data0 = d3.csv("../data/3.csv", d3.autoType)
       .then(function(data0){ 
+
+  let data = data0
+      .filter(d => d.country == "DE"); 
 
 // --------------------------------------
 // Scales
@@ -51,25 +54,25 @@ let x = d3.scaleTime()
     .range([0, innerwidth]);
 
 let y = d3.scaleLinear()
-  .domain([0, d3.max(data0, (d) => d.home_score)])
-  .range([innerheight, 0]);
+    .domain([0, d3.max(data0, (d) => d.home_score)])
+    .range([innerheight, 0]);
 
 // --------------------------------------
 // Generators
 // --------------------------------------
   
 let line = d3.line()
-  .defined((d) => d.home_score > 0)
-  .curve(d3.curveNatural)
-  .x((d) => x(d.Year))
-  .y((d) => y(d.home_score));
+    .defined((d) => d.home_score > 0)
+    .curve(d3.curveNatural)
+    .x((d) => x(d.Year))
+    .y((d) => y(d.home_score));
 
 let area = d3.area()
-  .defined((d) => d.home_score > 0)
-  .curve(d3.curveNatural)
-  .x((d) => x(d.Year))
-  .y0(y(0))
-  .y1((d) => y(d.home_score));
+    .defined((d) => d.home_score > 0)
+    .curve(d3.curveNatural)
+    .x((d) => x(d.Year))
+    .y0(y(0))
+    .y1((d) => y(d.home_score));
 
 // --------------------------------------
 // Line and area drawing

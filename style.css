@@ -115,7 +115,7 @@ a:focus {
 }
 
 .label {
-	font-size: var(--step-0);
+	font-size: var(--step--3);
 	font-weight: 600;
 }
 
