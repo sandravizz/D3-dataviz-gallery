@@ -62,14 +62,14 @@ let line = d3.line()
   .defined((d) => d.home_score > 0)
   .curve(d3.curveNatural)
   .x((d) => x(d.Year))
-  .y((d) => y(d.home_score))
+  .y((d) => y(d.home_score));
 
 let area = d3.area()
   .defined((d) => d.home_score > 0)
   .curve(d3.curveNatural)
   .x((d) => x(d.Year))
   .y0(y(0))
-  .y1((d) => y(d.home_score))
+  .y1((d) => y(d.home_score));
 
 // --------------------------------------
 // Line and area drawing
@@ -78,14 +78,14 @@ let area = d3.area()
 innerChart0
   .append("path")
   .datum(data0)
-  .attr("class", "area")
-  .style("fill", "url(#areaGradient)")
-  .attr("d", area);
+  .attr("class", "line")
+  .attr("d", line);
 
 innerChart0
   .append("path")
   .datum(data0)
-  .attr("class", "line")
-  .attr("d", line);
+  .attr("class", "area")
+  .style("fill", "url(#areaGradient)")
+  .attr("d", area);
  
 });

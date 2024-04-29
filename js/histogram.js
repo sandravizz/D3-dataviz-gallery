@@ -35,19 +35,19 @@ let data = data6
 //  Create the bins for the histogram
 // --------------------------------------
 
-let bins = d3.bin().thresholds(40)(data);
+let bins = d3.bin().thresholds(50)(data);
 
 // --------------------------------------
 //  Scales
 // --------------------------------------
 
-let y = d3.scaleLinear()
-    .domain([0, d3.max(bins, d => d.length)]).nice()
-    .range([innerheight, 0]);
-
 let x = d3.scaleLinear()
     .domain([bins[0].x0, bins[bins.length - 1].x1])
     .range([0, innerwidth]); 
+
+let y = d3.scaleLinear()
+    .domain([0, d3.max(bins, d => d.length)])
+    .range([innerheight, 0]);
 
 // --------------------------------------
 //  Axes 
@@ -58,7 +58,7 @@ innerChart6
     .attr("class", "x-axis")
     .attr("transform", `translate(0, ${innerheight})`)
     .call(d3.axisBottom(x)
-            .tickValues([0.2, 0.4, 0.6, 0.8])
+            .tickValues([0, 0.2, 0.4, 0.6, 0.8, 1])
      	      .tickSize(0)
             .tickFormat(format6)
             .tickPadding(25));
@@ -68,14 +68,13 @@ innerChart6
 // --------------------------------------
 
 innerChart6
-  .append("g")
   .selectAll("rect")
   .data(bins)
   .join("rect")
-  .attr("x", d => x(d.x0) + 1)
-  .attr("fill", "#05C7F2")
-  .attr("width", d => Math.max(0, x(d.x1) - x(d.x0) - 1))
+  .attr("x", d => x(d.x0))
+  .attr("width", d => x(d.x1) - x(d.x0) - 1)
   .attr("y", d => y(d.length))
-  .attr("height", d => y(0) - y(d.length));
+  .attr("height", d => innerheight - y(d.length))
+  .attr("fill", "#05C7F2");
 
 });
