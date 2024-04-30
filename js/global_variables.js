@@ -14,8 +14,7 @@ const innerheight = height - margin.top - margin.bottom;
 
 const format = d3.format(".03s");
 const format6 = d3.format(".0");
-const parseDate0 = d3.timeParse("%Y");
-const formatDate0 = d3.timeFormat("%Y");
+
 const parseDate = d3.timeParse("%Y");
 const formatDate = d3.timeFormat("%Y");
 

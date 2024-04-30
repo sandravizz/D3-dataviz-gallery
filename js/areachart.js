@@ -39,22 +39,31 @@ let areaGradient = innerChart0
 // Data loading
 // --------------------------------------
 
-const data0 = d3.csv("../data/3.csv", d3.autoType)
-      .then(function(data0){ 
+const data0 = d3.csv("../data/3.csv", d => {
 
-  let data = data0
-      .filter(d => d.country == "DE"); 
+  return {
+      Gini: +d.value,
+      Country: d.country,
+      Region: d.region,
+      Region2: d.region2,
+      Year: parseDate(d.year)
+  };
+
+}).then(data0 => {
+
+  let data = data0.filter(d => d.Country == "DE"); 
+  console.log(data);
 
 // --------------------------------------
 // Scales
 // --------------------------------------
 
 let x = d3.scaleTime()
-    .domain(d3.extent(data0, d => d.Year))
+    .domain(d3.extent(data, d => d.Year))
     .range([0, innerwidth]);
 
 let y = d3.scaleLinear()
-    .domain([0, d3.max(data0, (d) => d.home_score)])
+    .domain([0, d3.max(data, (d) => d.Gini)])
     .range([innerheight, 0]);
 
 // --------------------------------------
@@ -62,17 +71,35 @@ let y = d3.scaleLinear()
 // --------------------------------------
   
 let line = d3.line()
-    .defined((d) => d.home_score > 0)
+    .defined((d) => d.Gini > 0)
     .curve(d3.curveNatural)
     .x((d) => x(d.Year))
-    .y((d) => y(d.home_score));
+    .y((d) => y(d.Gini));
 
 let area = d3.area()
-    .defined((d) => d.home_score > 0)
+    .defined((d) => d.Gini > 0)
     .curve(d3.curveNatural)
     .x((d) => x(d.Year))
     .y0(y(0))
-    .y1((d) => y(d.home_score));
+    .y1((d) => y(d.Gini));
+
+// --------------------------------------
+//  Axes 
+// --------------------------------------
+
+innerChart0
+.append("g")
+.attr("class", "x-axis")
+.attr("transform", `translate(0, ${innerheight})`)
+.call(d3.axisBottom(x)
+        .tickValues([parseDate(1980), parseDate(1985), 
+          parseDate(1990), parseDate(1995), 
+          parseDate(2000), parseDate(2005), 
+          parseDate(2010), parseDate(2015), 
+          parseDate(2020)])
+        .tickSize(5)
+        .tickFormat(formatDate)
+        .tickPadding(0));
 
 // --------------------------------------
 // Line and area drawing
@@ -80,15 +107,15 @@ let area = d3.area()
 
 innerChart0
   .append("path")
-  .datum(data0)
+  .datum(data)
   .attr("class", "line")
   .attr("d", line);
 
 innerChart0
   .append("path")
-  .datum(data0)
+  .datum(data)
   .attr("class", "area")
   .style("fill", "url(#areaGradient)")
   .attr("d", area);
- 
+
 });
