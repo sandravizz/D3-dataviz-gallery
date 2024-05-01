@@ -26,6 +26,7 @@ const data7 = d3.csv("../data/td-més_centres.csv", d3.autoType)
 
 let c = d3
    .scaleOrdinal()
+   .domain(sexe)
    .range(["#022859", "#f20666"]);
 
 let r = d3

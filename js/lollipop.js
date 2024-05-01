@@ -27,8 +27,7 @@ const data3 = d3.csv("../data/3.csv", d => {
   }).then(data3 => {
   
     let data = data3.filter(d => d.Country == "DE"); 
-    console.log(data);
-
+    
 // --------------------------------------
 //  Scales
 // --------------------------------------

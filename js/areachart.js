@@ -41,18 +41,17 @@ let areaGradient = innerChart0
 
 const data0 = d3.csv("../data/3.csv", d => {
 
-  return {
-      Gini: +d.value,
-      Country: d.country,
-      Region: d.region,
-      Region2: d.region2,
-      Year: parseDate(d.year)
-  };
+      return {
+          Gini: +d.value,
+          Country: d.country,
+          Region: d.region,
+          Region2: d.region2,
+          Year: parseDate(d.year)
+      };
 
-}).then(data0 => {
+  }).then(data0 => {
 
-  let data = data0.filter(d => d.Country == "DE"); 
-  console.log(data);
+      let data = data0.filter(d => d.Country == "DE"); 
 
 // --------------------------------------
 // Scales
@@ -88,18 +87,18 @@ let area = d3.area()
 // --------------------------------------
 
 innerChart0
-.append("g")
-.attr("class", "x-axis")
-.attr("transform", `translate(0, ${innerheight})`)
-.call(d3.axisBottom(x)
-        .tickValues([parseDate(1980), parseDate(1985), 
-          parseDate(1990), parseDate(1995), 
-          parseDate(2000), parseDate(2005), 
-          parseDate(2010), parseDate(2015), 
-          parseDate(2020)])
-        .tickSize(5)
-        .tickFormat(formatDate)
-        .tickPadding(0));
+  .append("g")
+  .attr("class", "x-axis")
+  .attr("transform", `translate(0, ${innerheight})`)
+  .call(d3.axisBottom(x)
+          .tickValues([parseDate(1980), parseDate(1985), 
+            parseDate(1990), parseDate(1995), 
+            parseDate(2000), parseDate(2005), 
+            parseDate(2010), parseDate(2015), 
+            parseDate(2020)])
+          .tickSize(5)
+          .tickFormat(formatDate)
+          .tickPadding(0));
 
 // --------------------------------------
 // Line and area drawing
