@@ -34,7 +34,7 @@ let y = d3.scaleTime()
     .range([0, innerheight]);
 
 let x = d3.scaleLinear()
-    .domain([0.2, 0.65])
+    .domain([0, 1])
     .range([0, innerwidth]);
 
 let c = d3.scaleOrdinal()
@@ -50,15 +50,14 @@ innerChart9
     .attr("class", "x-axis")
     .attr("transform", `translate(0, ${innerheight})`)
     .call(d3.axisBottom(x)
-         .tickValues([0.3, 0.4, 0.5, 0.6])
+         .tickValues([0.2, 0.4, 0.6, 0.8, 1])
      	 .tickSize(0)
-         .tickFormat(format)
-         .tickPadding(0));
+         .tickPadding(10));
 
 innerChart9
     .append("g")
     .attr("class", "y-axis")
-    .attr("transform", `translate(0, 10)`)
+    .attr("transform", `translate(0, 5)`)
     .call(d3.axisRight(y)
           .tickSize(0)
           .tickFormat(formatDate)
@@ -76,9 +75,8 @@ innerChart9
     .attr("class", "rect") 
     .attr("x", (d) => x(d.Gini))
     .attr("y", (d) => y(d.Year))
-    .attr("width", 2)
-    .attr("height", 9)
-    .attr("opacity", 1)  
+    .attr("width", 1)
+    .attr("height", 5)
     .attr("fill",  (d) => c(d.Region));
 
 // --------------------------------------
