@@ -42,7 +42,7 @@ let y = d3.scaleLinear()
 
 let r1 = d3.scaleSqrt()
     .domain([0, d3.max(data, (d) => d.Gini)])
-    .range([0, 7]);
+    .range([0, 4]);
 
 // --------------------------------------
 //  Axes 
@@ -75,7 +75,7 @@ innerChart3
     .attr("x2", (d) => x(d.Year))
     .attr("y1", innerheight)
     .attr("y2",  innerheight)
-    .attr("stroke", "#ccff99")
+    .attr("stroke", "#f20666")
     .attr("stroke-width", 0.5)
     .attr("opacity", 1)
     .transition()
@@ -91,9 +91,9 @@ innerChart3
     .attr("cx", (d) => x(d.Year))
     .attr("cy", (d) => y(d.Gini))
     .attr("r", 0)
-    .attr("fill", "#ccff99")
+    .attr("fill", "#f20666")
     .attr("fill-opacity", 1)
-    .attr("stroke", "#ccff99")
+    .attr("stroke", "#f20666")
     .attr("stroke-width", 0.2)
     .transition()
     .delay((d) => 500 + x(d.Year) * 5)

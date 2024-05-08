@@ -25,14 +25,14 @@ let areaGradient = innerChart0
 
   areaGradient
     .append("stop")
-    .attr("offset", 0.5)
-    .attr("stop-color","#05C7F2")
+    .attr("offset", 0.2)
+    .attr("stop-color","#f20666")
     .attr("stop-opacity", 1);
 
   areaGradient
     .append("stop")
     .attr("offset", 1)
-    .attr("stop-color", "#05C7F2")
+    .attr("stop-color", "#f20666")
     .attr("stop-opacity", 0);
     
 // --------------------------------------

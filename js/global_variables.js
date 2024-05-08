@@ -3,7 +3,7 @@
 // --------------------------------------
 
 //Simple charts (dont need much space)
-const margin = {top: 20, right: 10, bottom: 20, left: 40};
+const margin = {top: 10, right: 10, bottom: 20, left: 40};
 const width = 900;
 const height = 150;
 const innerwidth = width - margin.left - margin.right;
