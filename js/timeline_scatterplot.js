@@ -39,7 +39,7 @@ let x = d3.scaleLinear()
 
 let c = d3.scaleOrdinal()
     .domain(["Asia", "Europe", "Africa", "Americas", "Oceania"])
-    .range(["#F2ECCE", "#3DBCD9", "#F2AE2E", "#F2785C", "#D93240"]);
+    .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1155F2"]);
 
 // --------------------------------------
 //  Axes 
@@ -79,8 +79,8 @@ innerChart9
     .attr("class", "rect") 
     .attr("x", (d) => x(d.Gini))
     .attr("y", (d) => y(d.Year))
-    .attr("width", 1)
-    .attr("height", 5)
+    .attr("width", 2.5)
+    .attr("height", 7.5)
     .attr("fill",  (d) => c(d.Region));
 
 // --------------------------------------
@@ -88,11 +88,11 @@ innerChart9
 // --------------------------------------
 
 const filters = [
-  { id: "Asia", label: "Asia", isActive: false,  backgroundcolor: "#F2ECCE" },
-  { id: "Europe", label: "Europe", isActive: false, backgroundcolor: "#3DBCD9" },
-  { id: "Africa", label: "Africa", isActive: false, backgroundcolor: "#F2AE2E" },
-  { id: "Americas", label: "Americas", isActive: false, backgroundcolor: "#F2785C" },
-  { id: "Oceania", label: "Oceania", isActive: false, backgroundcolor: "#D93240" }
+  { id: "Asia", label: "Asia", isActive: false,  backgroundcolor: "#06d6a0" },
+  { id: "Europe", label: "Europe", isActive: false, backgroundcolor: "#f20666" },
+  { id: "Africa", label: "Africa", isActive: false, backgroundcolor: "#662e9b" },
+  { id: "Americas", label: "Americas", isActive: false, backgroundcolor: "#9EF211" },
+  { id: "Oceania", label: "Oceania", isActive: false, backgroundcolor: "#1155F2" }
   ];
 
   d3.select("#filters")

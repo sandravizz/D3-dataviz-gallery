@@ -12,7 +12,7 @@ const innerheight = height - margin.top - margin.bottom;
 //More complex chart (need biiger visual space)
 const margin2 = {top: 20, right: 10, bottom: 20, left: 40};
 const width2 = 900;
-const height2 = 350;
+const height2 = 450;
 const innerwidth2 = width2 - margin2.left - margin2.right;
 const innerheight2 = height2 - margin2.top - margin2.bottom;
 

@@ -69,7 +69,8 @@ let region_type = d3.rollups(
 
 let c = d3.scaleOrdinal()
         .domain(["Asia", "Europe", "Africa", "Americas", "Oceania"])
-        .range(["#F2ECCE", "#3DBCD9", "#F2AE2E", "#F2785C", "#D93240"]);
+        .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1155F2"]);
+
 
 // --------------------------------------
 // Bars
