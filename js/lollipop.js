@@ -2,7 +2,7 @@
 //  Canvas
 // --------------------------------------
 
-const svg3 = d3.select("#chart3")
+const svg3 = d3.select("#chart1")
   .append("svg")
     .attr("viewBox", [0, 0, width, height]);
 

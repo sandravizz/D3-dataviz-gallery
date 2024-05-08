@@ -2,13 +2,13 @@
 //  Canvas
 // --------------------------------------
 
-const svg9 = d3.select("#chart9")
+const svg9 = d3.select("#chart3")
   .append("svg")
-    .attr("viewBox", [0, 0, width, height]);
+    .attr("viewBox", [0, 0, width2, height2]);
 
 const innerChart9 = svg9
   .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
 // --------------------------------------
 //  Data loading 
@@ -31,11 +31,11 @@ const data9 = d3.csv("/data/3.csv", d => {
 
 let y = d3.scaleTime()
     .domain(d3.extent(data9, d => (d.Year)))
-    .range([0, innerheight]);
+    .range([0, innerheight2]);
 
 let x = d3.scaleLinear()
-    .domain([0, 1])
-    .range([0, innerwidth]);
+    .domain([0, 0.8])
+    .range([0, innerwidth2]);
 
 let c = d3.scaleOrdinal()
     .domain(["Asia", "Europe", "Africa", "Americas", "Oceania"])
@@ -48,9 +48,9 @@ let c = d3.scaleOrdinal()
 innerChart9
     .append("g")
     .attr("class", "x-axis")
-    .attr("transform", `translate(0, ${innerheight})`)
+    .attr("transform", `translate(0, ${innerheight2})`)
     .call(d3.axisBottom(x)
-         .tickValues([0.2, 0.4, 0.6, 0.8, 1])
+         .tickValues([0.2, 0.4, 0.6, 0.8])
      	 .tickSize(0)
          .tickPadding(10));
 
@@ -62,7 +62,11 @@ innerChart9
           .tickSize(0)
           .tickFormat(formatDate)
           .tickPadding(0)
-          .tickValues([parseDate(1980), parseDate(1985), parseDate(1990), parseDate(1995), parseDate(2000), parseDate(2005), parseDate(2010), parseDate(2015), parseDate(2020)])); 
+          .tickValues([parseDate(1980), 
+            parseDate(1985), parseDate(1990), 
+            parseDate(1995), parseDate(2000), 
+            parseDate(2005), parseDate(2010), 
+            parseDate(2015), parseDate(2020)])); 
 
 // --------------------------------------
 //  Data drawing

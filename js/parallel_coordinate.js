@@ -17,7 +17,6 @@ const innerChart10 = svg10
 let test = d3.csv("../data/cars.csv");
 console.log(test); 
 
-
 const data10 = d3.csv("../data/cars.csv", d3.autoType)
       .then(function(data10){  
 
