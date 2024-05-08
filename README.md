@@ -4,10 +4,10 @@ In this repository include a collection of d3.js data visulaisations using using
 
 ## Finished visualisations 
 
-- Area chart
-- Lollipop chart 
-- Timeline scatter plot 
-- Barchart 
+- [Area chart](js/areachart.js)
+- [Lollipop chart](js/lollipop.js)
+- [Barchart](js/barchart.js)
+- [Timeline scatter plot](js/timeline_scatterplot.js)
 
 ## In progress visualisations 
 
@@ -62,3 +62,4 @@ https://observablehq.com/d/17e6f8deba1d2557
 - Circular bar chart
 https://d3-graph-gallery.com/graph/circular_barplot_double.html
 
+Made with :green_heart:  by [Sandra](https://www.sandraviz.com/bio) 
