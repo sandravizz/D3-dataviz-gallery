@@ -1,72 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview of chart templates with d3.js</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Overview of chart templates with d3.js</title>   
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">		
-</head>
+  <body>
+    <div class="container">
+      <h1>Overview chart templates | d3.js</h1>
 
-<body>
-	
-<div class="container">
+      <div>
+        <h3>Area chart (color gradient)</h3>
+        <p class="chart_title">
+          The area chart is perfect for showing time series data. The gradient
+          helps to focus on the edges, which is, where the actual movement is
+          visiable. This chart shows the gini (income) for Germany from
+          1980-2022.
+        </p>
+        <div id="chart0"></div>
+      </div>
 
-	<h1>Overview chart templates | d3.js </h1>
-		
-	<h3>Area chart (color gradient)</h3>
-		<p class ="chart_title">The area chart 
-			is perfect for showing time series data. 
-			The gradient helps to focus on the edges, 
-			which is, where the actual movement is visiable.
-			This chart shows the gini (income) for Germany from 1980-2022.
-		</p>
-		<div id="chart0"></div> 
+      <div>
+        <h3>Lollipop chart (animated)</h3>
+        <p class="chart_title">
+          The lollipop chart emphasis the focus on the single data points. This
+          chart shows the same data as the area chart above.
+        </p>
+        <div id="chart1"></div>
+      </div>
 
-	<h3>Lollipop chart (animated)</h3>  
-		<p class ="chart_title">The lollipop chart 
-			emphasis the focus on the single data points. 
-			This chart shows the same data as the area chart above.
-		</p>          
-		<div id="chart1"></div>
+      <div>
+        <h3>Bar chart ranking (with tooltip)</h3>
+        <p class="chart_title">
+          This bar chart shows the gini values grouped by region and added a
+          tooltip.
+        </p>
+        <div id="chart2"></div>
+      </div>
 
-	<h3>Bar chart ranking (with tooltip)</h3> 
-		<p class ="chart_title"> This bar chart shows 
-			the gini values grouped
-			by region and added a tooltip. 
-		</p>	
-	
-		<div id="chart2"></div>
+      <div>
+        <h3>Timeline scatter plot</h3>
+        <p class="chart_title">The timeline scatter plot shows ...</p>
+        <div id="filters"></div>
+        <div id="chart3"></div>
+      </div>
 
-	<h3>Timeline scatter plot </h3>  
-		<p class ="chart_title">The timeline scatter plot 
-			shows ...
-		</p>
-		<div id="filters"></div>
-		<div id="chart3"></div>
-		
-</div>    
+      <div>
+        <h3>Scatter plot 1980 vs. 2022</h3>
+        <p class="chart_title">
+          The scatter plot shows the gini for 1980 vs. 2022
+        </p>
+        <div id="chart4"></div>
+      </div>
+    </div>
 
-<!-- d3 libaries -->
-<script src="js/d3-sankey.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-<script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
-<script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+    <!-- d3 libaries -->
+    <script src="js/d3-sankey.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 
-<!-- charts -->
-<script src="js/global_variables.js"></script> 
-<script src="js/areachart.js"></script> 
-<script src="js/lollipop.js"></script> 
-<script src="js/timeline_scatterplot.js"></script>  
-<script src="js/barchart.js"></script> 
+    <!-- charts -->
+    <script src="js/global_variables.js"></script>
+    <script src="js/areachart.js"></script>
+    <script src="js/lollipop.js"></script>
+    <script src="js/timeline_scatterplot.js"></script>
+    <script src="js/barchart.js"></script>
+    <script src="js/scatterplot1.js"></script>
 
-<!-- <script src="js/histogram.js"></script>  
+    <!-- <script src="js/histogram.js"></script>  
 <script src="js/sankey.js"></script>  
 <script src="js/scatterplot1.js"></script>  
 <script src="js/scatterplot.js"></script> 
 <script src="js/parallel_coordinate.js"></script>  
 <script src="js/beeswarm.js"></script>  -->
-
-</body>
+  </body>
 </html>

@@ -151,7 +151,7 @@ h3 {
 	stroke: white;
 }
 
-.x-axix line {
+.x-axis line {
 	fill: none;
 	stroke-width: 0;
 	stroke-opacity: 1;
@@ -199,6 +199,9 @@ h3 {
 #filters button:hover {
 	border-radius: 60px;
 }
+
+
+
 
   
  
