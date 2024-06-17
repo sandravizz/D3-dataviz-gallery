@@ -63,4 +63,6 @@ In this repository include a collection of d3.js data visulaisations using using
 - Circular bar chart
   https://d3-graph-gallery.com/graph/circular_barplot_double.html
 
-Made with :green_heart: by [Sandra](https://www.sandraviz.com/bio)
+Made with :green_heart: by [Sandraviz](https://www.sandraviz.com/bio)
+
+Follow me: [twitter](https://twitter.com/SandraCrypto), [linkedin](https://www.linkedin.com/in/sandradataviz/) and [observable](https://observablehq.com/@sandraviz)
