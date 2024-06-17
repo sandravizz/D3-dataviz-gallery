@@ -1,6 +1,6 @@
 # My d3.js dataviz gallery
 
-In this repository include a collection of d3.js data visulaisations using using structured code to easily replicate.
+This repository include a collection of d3.js data visulaisations to easily replicate.
 
 ## Finished visualisations
 
