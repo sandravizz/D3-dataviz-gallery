@@ -78,7 +78,7 @@ const data0 = d3
       .x((d) => x(d.Year))
       .y((d) => y(d.Gini));
 
-    // console.log(line(data));
+    console.log(line(data));
 
     let area = d3
       .area()
