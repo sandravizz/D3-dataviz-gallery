@@ -1,11 +1,11 @@
 sexe,tipus_centre,grups_edat,centre,pacients,visites
+home,adults,0-5,CSM Adults Esquerra Eixample,5,12
+home,adults,0-5,CSM Adults Sants,0,1
 home,adults,6-12,CSM Adults Bages,2,4
 home,adults,6-12,CSM Adults Balaguer,1,1
 home,adults,6-12,CSM Adults Lleida,1,3
 home,adults,6-12,CSM Adults Mataró,2,23
 home,adults,6-12,CSM Adults Osona,2,29
-home,adults,<6,CSM Adults Esquerra Eixample,5,12
-home,adults,<6,CSM Adults Sants,0,1
 home,adults,13-17,CSM  Gavà,1,1
 home,adults,13-17,CSM Adults Alt Urgell,3,3
 home,adults,13-17,CSM Adults Amposta,2,4
@@ -600,56 +600,56 @@ home,infantil,6-12,CSMIJ Baix Empordà,381,1917
 home,infantil,6-12,CSMIJ Cerdanyola-Ripollet,418,2862
 home,infantil,6-12,CSMIJ Gironès-Pla de l'Estany,463,2585
 home,infantil,6-12,CSMIJ Les Corts-Sarrià-Sant Gervasi,395,5118
-home,infantil,<6,CSM Infantil i Juvenil Alt Penedès,9,27
-home,infantil,<6,CSM Infantil i Juvenil Amposta,8,64
-home,infantil,<6,CSM Infantil i Juvenil Anoia,4,12
-home,infantil,<6,CSM Infantil i Juvenil Badalona 2 Oest,26,111
-home,infantil,<6,CSM Infantil i Juvenil Calella,7,28
-home,infantil,<6,CSM Infantil i Juvenil Castelldefels,33,264
-home,infantil,<6,CSM Infantil i Juvenil Cornellà Llobreg.,27,116
-home,infantil,<6,CSM Infantil i Juvenil Eixample,10,66
-home,infantil,<6,CSM Infantil i Juvenil El Garraf,16,61
-home,infantil,<6,CSM Infantil i Juvenil El Prat,18,90
-home,infantil,<6,CSM Infantil i Juvenil El Vendrell,13,54
-home,infantil,<6,CSM Infantil i Juvenil Garrotxa,13,25
-home,infantil,<6,CSM Infantil i Juvenil Gavà,45,220
-home,infantil,<6,CSM Infantil i Juvenil Gràcia,7,48
-home,infantil,<6,CSM Infantil i Juvenil Granollers,36,220
-home,infantil,<6,CSM Infantil i Juvenil Horta-Guinardó,26,76
-home,infantil,<6,CSM Infantil i Juvenil Hospitalet Llob.,53,369
-home,infantil,<6,CSM Infantil i Juvenil La Mina,9,27
-home,infantil,<6,CSM Infantil i Juvenil La Selva Interior,5,7
-home,infantil,<6,CSM Infantil i Juvenil Lleida,66,379
-home,infantil,<6,CSM Infantil i Juvenil Manresa,7,31
-home,infantil,<6,CSM Infantil i Juvenil Martorell,31,167
-home,infantil,<6,CSM Infantil i Juvenil Mataró,44,169
-home,infantil,<6,CSM Infantil i Juvenil Molins de Rei,8,28
-home,infantil,<6,CSM Infantil i Juvenil Mollet del Vallès,9,68
-home,infantil,<6,CSM Infantil i Juvenil Montcada i Reixac,4,33
-home,infantil,<6,CSM Infantil i Juvenil Móra d'Ebre,1,5
-home,infantil,<6,CSM Infantil i Juvenil Nou Barris,33,165
-home,infantil,<6,CSM Infantil i Juvenil Osona,23,63
-home,infantil,<6,CSM Infantil i Juvenil Pallars,1,2
-home,infantil,<6,CSM Infantil i Juvenil Reus,20,80
-home,infantil,<6,CSM Infantil i Juvenil Ripollès,5,16
-home,infantil,<6,CSM Infantil i Juvenil Rubí,17,66
-home,infantil,<6,CSM Infantil i Juvenil Sabadell,157,743
-home,infantil,<6,CSM Infantil i Juvenil Sant Andreu,28,154
-home,infantil,<6,CSM Infantil i Juvenil Sant Martí Nord,17,79
-home,infantil,<6,CSM Infantil i Juvenil Sant Martí Sud,27,128
-home,infantil,<6,CSM Infantil i Juvenil Santa Coloma Gnet,59,230
-home,infantil,<6,CSM Infantil i Juvenil Sants-Montjuïc,51,300
-home,infantil,<6,CSM Infantil i Juvenil St. Boi Llobregat,19,156
-home,infantil,<6,CSM Infantil i Juvenil Tarragona,66,533
-home,infantil,<6,CSM Infantil i Juvenil Tortosa,19,163
-home,infantil,<6,CSM Infantil i Juvenil Valls,7,18
-home,infantil,<6,CSMIJ Alt Empordà,43,154
-home,infantil,<6,CSMIJ Antena Selva Marítima,5,8
-home,infantil,<6,CSMIJ Badalona 1 Est Joan Obiols,29,131
-home,infantil,<6,CSMIJ Baix Empordà,14,35
-home,infantil,<6,CSMIJ Cerdanyola-Ripollet,34,127
-home,infantil,<6,CSMIJ Gironès-Pla de l'Estany,37,117
-home,infantil,<6,CSMIJ Les Corts-Sarrià-Sant Gervasi,10,41
+home,infantil,0-5,CSM Infantil i Juvenil Alt Penedès,9,27
+home,infantil,0-5,CSM Infantil i Juvenil Amposta,8,64
+home,infantil,0-5,CSM Infantil i Juvenil Anoia,4,12
+home,infantil,0-5,CSM Infantil i Juvenil Badalona 2 Oest,26,111
+home,infantil,0-5,CSM Infantil i Juvenil Calella,7,28
+home,infantil,0-5,CSM Infantil i Juvenil Castelldefels,33,264
+home,infantil,0-5,CSM Infantil i Juvenil Cornellà Llobreg.,27,116
+home,infantil,0-5,CSM Infantil i Juvenil Eixample,10,66
+home,infantil,0-5,CSM Infantil i Juvenil El Garraf,16,61
+home,infantil,0-5,CSM Infantil i Juvenil El Prat,18,90
+home,infantil,0-5,CSM Infantil i Juvenil El Vendrell,13,54
+home,infantil,0-5,CSM Infantil i Juvenil Garrotxa,13,25
+home,infantil,0-5,CSM Infantil i Juvenil Gavà,45,220
+home,infantil,0-5,CSM Infantil i Juvenil Gràcia,7,48
+home,infantil,0-5,CSM Infantil i Juvenil Granollers,36,220
+home,infantil,0-5,CSM Infantil i Juvenil Horta-Guinardó,26,76
+home,infantil,0-5,CSM Infantil i Juvenil Hospitalet Llob.,53,369
+home,infantil,0-5,CSM Infantil i Juvenil La Mina,9,27
+home,infantil,0-5,CSM Infantil i Juvenil La Selva Interior,5,7
+home,infantil,0-5,CSM Infantil i Juvenil Lleida,66,379
+home,infantil,0-5,CSM Infantil i Juvenil Manresa,7,31
+home,infantil,0-5,CSM Infantil i Juvenil Martorell,31,167
+home,infantil,0-5,CSM Infantil i Juvenil Mataró,44,169
+home,infantil,0-5,CSM Infantil i Juvenil Molins de Rei,8,28
+home,infantil,0-5,CSM Infantil i Juvenil Mollet del Vallès,9,68
+home,infantil,0-5,CSM Infantil i Juvenil Montcada i Reixac,4,33
+home,infantil,0-5,CSM Infantil i Juvenil Móra d'Ebre,1,5
+home,infantil,0-5,CSM Infantil i Juvenil Nou Barris,33,165
+home,infantil,0-5,CSM Infantil i Juvenil Osona,23,63
+home,infantil,0-5,CSM Infantil i Juvenil Pallars,1,2
+home,infantil,0-5,CSM Infantil i Juvenil Reus,20,80
+home,infantil,0-5,CSM Infantil i Juvenil Ripollès,5,16
+home,infantil,0-5,CSM Infantil i Juvenil Rubí,17,66
+home,infantil,0-5,CSM Infantil i Juvenil Sabadell,157,743
+home,infantil,0-5,CSM Infantil i Juvenil Sant Andreu,28,154
+home,infantil,0-5,CSM Infantil i Juvenil Sant Martí Nord,17,79
+home,infantil,0-5,CSM Infantil i Juvenil Sant Martí Sud,27,128
+home,infantil,0-5,CSM Infantil i Juvenil Santa Coloma Gnet,59,230
+home,infantil,0-5,CSM Infantil i Juvenil Sants-Montjuïc,51,300
+home,infantil,0-5,CSM Infantil i Juvenil St. Boi Llobregat,19,156
+home,infantil,0-5,CSM Infantil i Juvenil Tarragona,66,533
+home,infantil,0-5,CSM Infantil i Juvenil Tortosa,19,163
+home,infantil,0-5,CSM Infantil i Juvenil Valls,7,18
+home,infantil,0-5,CSMIJ Alt Empordà,43,154
+home,infantil,0-5,CSMIJ Antena Selva Marítima,5,8
+home,infantil,0-5,CSMIJ Badalona 1 Est Joan Obiols,29,131
+home,infantil,0-5,CSMIJ Baix Empordà,14,35
+home,infantil,0-5,CSMIJ Cerdanyola-Ripollet,34,127
+home,infantil,0-5,CSMIJ Gironès-Pla de l'Estany,37,117
+home,infantil,0-5,CSMIJ Les Corts-Sarrià-Sant Gervasi,10,41
 home,infantil,13-17,CSM Infantil i Juvenil Alt Penedès,290,1347
 home,infantil,13-17,CSM Infantil i Juvenil Alt Urgell,72,425
 home,infantil,13-17,CSM Infantil i Juvenil Alta Ribagorça,11,62
@@ -797,7 +797,7 @@ home,infantil,55-64,CSMIJ Gironès-Pla de l'Estany,1,7
 home,infantil,65-74,CSM Infantil i Juvenil Rubí,1,2
 home,infantil,65-74,CSM Infantil i Juvenil Sant Martí Sud,1,4
 dona,adults,6-12,CSM Adults Osona,1,9
-dona,adults,<6,CSM Adults Esquerra Eixample,6,12
+dona,adults,0-5,CSM Adults Esquerra Eixample,6,12
 dona,adults,13-17,CSM Adults Alt Empordà,2,2
 dona,adults,13-17,CSM Adults Alt Urgell,1,3
 dona,adults,13-17,CSM Adults Amposta,1,3
@@ -1397,54 +1397,54 @@ dona,infantil,6-12,CSMIJ Baix Empordà,121,572
 dona,infantil,6-12,CSMIJ Cerdanyola-Ripollet,189,1129
 dona,infantil,6-12,CSMIJ Gironès-Pla de l'Estany,139,803
 dona,infantil,6-12,CSMIJ Les Corts-Sarrià-Sant Gervasi,159,1597
-dona,infantil,<6,CSM Infantil i Juvenil Alt Penedès,8,13
-dona,infantil,<6,CSM Infantil i Juvenil Alt Urgell,1,2
-dona,infantil,<6,CSM Infantil i Juvenil Amposta,2,3
-dona,infantil,<6,CSM Infantil i Juvenil Anoia,2,4
-dona,infantil,<6,CSM Infantil i Juvenil Badalona 2 Oest,11,37
-dona,infantil,<6,CSM Infantil i Juvenil Calella,3,16
-dona,infantil,<6,CSM Infantil i Juvenil Castelldefels,14,99
-dona,infantil,<6,CSM Infantil i Juvenil Ciutat Vella,1,4
-dona,infantil,<6,CSM Infantil i Juvenil Cornellà Llobreg.,11,31
-dona,infantil,<6,CSM Infantil i Juvenil Eixample,3,32
-dona,infantil,<6,CSM Infantil i Juvenil El Garraf,5,28
-dona,infantil,<6,CSM Infantil i Juvenil El Prat,5,31
-dona,infantil,<6,CSM Infantil i Juvenil El Vendrell,6,23
-dona,infantil,<6,CSM Infantil i Juvenil Garrotxa,5,14
-dona,infantil,<6,CSM Infantil i Juvenil Gavà,23,104
-dona,infantil,<6,CSM Infantil i Juvenil Gràcia,1,1
-dona,infantil,<6,CSM Infantil i Juvenil Granollers,9,67
-dona,infantil,<6,CSM Infantil i Juvenil Horta-Guinardó,16,55
-dona,infantil,<6,CSM Infantil i Juvenil Hospitalet Llob.,21,84
-dona,infantil,<6,CSM Infantil i Juvenil La Mina,2,6
-dona,infantil,<6,CSM Infantil i Juvenil La Selva Interior,3,6
-dona,infantil,<6,CSM Infantil i Juvenil Lleida,17,74
-dona,infantil,<6,CSM Infantil i Juvenil Manresa,3,11
-dona,infantil,<6,CSM Infantil i Juvenil Martorell,10,56
-dona,infantil,<6,CSM Infantil i Juvenil Mataró,20,60
-dona,infantil,<6,CSM Infantil i Juvenil Molins de Rei,4,24
-dona,infantil,<6,CSM Infantil i Juvenil Mollet del Vallès,5,28
-dona,infantil,<6,CSM Infantil i Juvenil Montcada i Reixac,2,10
-dona,infantil,<6,CSM Infantil i Juvenil Nou Barris,13,56
-dona,infantil,<6,CSM Infantil i Juvenil Osona,8,20
-dona,infantil,<6,CSM Infantil i Juvenil Reus,6,53
-dona,infantil,<6,CSM Infantil i Juvenil Rubí,2,8
-dona,infantil,<6,CSM Infantil i Juvenil Sabadell,49,252
-dona,infantil,<6,CSM Infantil i Juvenil Sant Andreu,12,66
-dona,infantil,<6,CSM Infantil i Juvenil Sant Martí Nord,3,18
-dona,infantil,<6,CSM Infantil i Juvenil Sant Martí Sud,9,48
-dona,infantil,<6,CSM Infantil i Juvenil Santa Coloma Gnet,29,136
-dona,infantil,<6,CSM Infantil i Juvenil Sants-Montjuïc,17,102
-dona,infantil,<6,CSM Infantil i Juvenil St. Boi Llobregat,9,66
-dona,infantil,<6,CSM Infantil i Juvenil Tarragona,18,72
-dona,infantil,<6,CSM Infantil i Juvenil Tortosa,4,12
-dona,infantil,<6,CSM Infantil i Juvenil Valls,1,9
-dona,infantil,<6,CSMIJ Alt Empordà,8,36
-dona,infantil,<6,CSMIJ Badalona 1 Est Joan Obiols,5,18
-dona,infantil,<6,CSMIJ Baix Empordà,4,7
-dona,infantil,<6,CSMIJ Cerdanyola-Ripollet,16,68
-dona,infantil,<6,CSMIJ Gironès-Pla de l'Estany,9,30
-dona,infantil,<6,CSMIJ Les Corts-Sarrià-Sant Gervasi,5,26
+dona,infantil,0-5,CSM Infantil i Juvenil Alt Penedès,8,13
+dona,infantil,0-5,CSM Infantil i Juvenil Alt Urgell,1,2
+dona,infantil,0-5,CSM Infantil i Juvenil Amposta,2,3
+dona,infantil,0-5,CSM Infantil i Juvenil Anoia,2,4
+dona,infantil,0-5,CSM Infantil i Juvenil Badalona 2 Oest,11,37
+dona,infantil,0-5,CSM Infantil i Juvenil Calella,3,16
+dona,infantil,0-5,CSM Infantil i Juvenil Castelldefels,14,99
+dona,infantil,0-5,CSM Infantil i Juvenil Ciutat Vella,1,4
+dona,infantil,0-5,CSM Infantil i Juvenil Cornellà Llobreg.,11,31
+dona,infantil,0-5,CSM Infantil i Juvenil Eixample,3,32
+dona,infantil,0-5,CSM Infantil i Juvenil El Garraf,5,28
+dona,infantil,0-5,CSM Infantil i Juvenil El Prat,5,31
+dona,infantil,0-5,CSM Infantil i Juvenil El Vendrell,6,23
+dona,infantil,0-5,CSM Infantil i Juvenil Garrotxa,5,14
+dona,infantil,0-5,CSM Infantil i Juvenil Gavà,23,104
+dona,infantil,0-5,CSM Infantil i Juvenil Gràcia,1,1
+dona,infantil,0-5,CSM Infantil i Juvenil Granollers,9,67
+dona,infantil,0-5,CSM Infantil i Juvenil Horta-Guinardó,16,55
+dona,infantil,0-5,CSM Infantil i Juvenil Hospitalet Llob.,21,84
+dona,infantil,0-5,CSM Infantil i Juvenil La Mina,2,6
+dona,infantil,0-5,CSM Infantil i Juvenil La Selva Interior,3,6
+dona,infantil,0-5,CSM Infantil i Juvenil Lleida,17,74
+dona,infantil,0-5,CSM Infantil i Juvenil Manresa,3,11
+dona,infantil,0-5,CSM Infantil i Juvenil Martorell,10,56
+dona,infantil,0-5,CSM Infantil i Juvenil Mataró,20,60
+dona,infantil,0-5,CSM Infantil i Juvenil Molins de Rei,4,24
+dona,infantil,0-5,CSM Infantil i Juvenil Mollet del Vallès,5,28
+dona,infantil,0-5,CSM Infantil i Juvenil Montcada i Reixac,2,10
+dona,infantil,0-5,CSM Infantil i Juvenil Nou Barris,13,56
+dona,infantil,0-5,CSM Infantil i Juvenil Osona,8,20
+dona,infantil,0-5,CSM Infantil i Juvenil Reus,6,53
+dona,infantil,0-5,CSM Infantil i Juvenil Rubí,2,8
+dona,infantil,0-5,CSM Infantil i Juvenil Sabadell,49,252
+dona,infantil,0-5,CSM Infantil i Juvenil Sant Andreu,12,66
+dona,infantil,0-5,CSM Infantil i Juvenil Sant Martí Nord,3,18
+dona,infantil,0-5,CSM Infantil i Juvenil Sant Martí Sud,9,48
+dona,infantil,0-5,CSM Infantil i Juvenil Santa Coloma Gnet,29,136
+dona,infantil,0-5,CSM Infantil i Juvenil Sants-Montjuïc,17,102
+dona,infantil,0-5,CSM Infantil i Juvenil St. Boi Llobregat,9,66
+dona,infantil,0-5,CSM Infantil i Juvenil Tarragona,18,72
+dona,infantil,0-5,CSM Infantil i Juvenil Tortosa,4,12
+dona,infantil,0-5,CSM Infantil i Juvenil Valls,1,9
+dona,infantil,0-5,CSMIJ Alt Empordà,8,36
+dona,infantil,0-5,CSMIJ Badalona 1 Est Joan Obiols,5,18
+dona,infantil,0-5,CSMIJ Baix Empordà,4,7
+dona,infantil,0-5,CSMIJ Cerdanyola-Ripollet,16,68
+dona,infantil,0-5,CSMIJ Gironès-Pla de l'Estany,9,30
+dona,infantil,0-5,CSMIJ Les Corts-Sarrià-Sant Gervasi,5,26
 dona,infantil,13-17,CSM Infantil i Juvenil Alt Penedès,192,1136
 dona,infantil,13-17,CSM Infantil i Juvenil Alt Urgell,37,254
 dona,infantil,13-17,CSM Infantil i Juvenil Alta Ribagorça,7,23
