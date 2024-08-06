@@ -13,19 +13,7 @@
 
   <body>
     <div class="container">
-
       <h1>Overview chart templates | d3.js</h1>
-
-      <div>
-        <h3>Area chart (color gradient)</h3>
-        <p class="chart_title">
-          The area chart is perfect for showing time series data. The gradient
-          helps to focus on the edges, which is, where the actual movement is
-          visiable. This chart shows the gini (income) for Germany from
-          1980-2022.
-        </p>
-        <div id="chart0"></div>
-      </div>
 
       <div>
         <h3>Lollipop chart (animated)</h3>
@@ -34,15 +22,6 @@
           chart shows the same data as the area chart above.
         </p>
         <div id="chart1"></div>
-      </div>
-
-      <div>
-        <h3>Bar chart ranking (with tooltip)</h3>
-        <p class="chart_title">
-          This bar chart shows the gini values grouped by region and added a
-          tooltip.
-        </p>
-        <div id="chart2"></div>
       </div>
 
       <div>
@@ -60,44 +39,35 @@
         <div id="chart4"></div>
       </div>
 
-    <div>
-      <h3>Beeswarm</h3>
-      <p class="chart_title">
-        The beeswarm ...
-      </p>
-      <div id="chart5"></div>
+      <div>
+        <h3>Area chart (color gradient)</h3>
+        <p class="chart_title">
+          The area chart is perfect for showing time series data. The gradient
+          helps to focus on the edges, which is, where the actual movement is
+          visiable. This chart shows the gini (income) for Germany from
+          1980-2022.
+        </p>
+        <div id="chart0"></div>
+      </div>
+
+      <div>
+        <h3>Beeswarm</h3>
+        <p class="chart_title">The beeswarm ...</p>
+        <div id="chart5"></div>
+      </div>
     </div>
 
-    <div>
-      <h3>Beeswarm</h3>
-      <p class="chart_title">
-        The beeswarm ...
-      </p>
-      <div id="chart6"></div>
-    </div>
-
-  </div>
-
-    <!-- d3 libaries -->
     <script src="js/d3-sankey.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 
-    <!-- charts -->
     <script src="js/global_variables.js"></script>
     <script src="js/areachart.js"></script>
     <script src="js/lollipop.js"></script>
     <script src="js/timeline_scatterplot.js"></script>
     <script src="js/barchart.js"></script>
     <script src="js/scatterplot1.js"></script>
-    <script src="js/beeswarm.js"></script> 
-
-    <!-- <script src="js/histogram.js"></script>  
-<script src="js/sankey.js"></script>  
-<script src="js/scatterplot1.js"></script>  
-<script src="js/scatterplot.js"></script> 
-<script src="js/parallel_coordinate.js"></script>  
-
+    <script src="js/beeswarm.js"></script>
   </body>
 </html>

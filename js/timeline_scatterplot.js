@@ -36,12 +36,7 @@ const data9 = d3
       .domain(d3.extent(data, (d) => d.Year))
       .range([0, innerheight2]);
 
-    let x = d3.scaleLinear().domain([0, 0.8]).range([0, innerwidth2]);
-
-    let o = d3
-      .scaleLinear()
-      .domain(d3.extent(data, (d) => d.Year))
-      .range([0.3, 1]);
+    let x = d3.scaleLinear().domain([0, 1]).range([0, innerwidth2]);
 
     let c = d3
       .scaleOrdinal()
@@ -57,11 +52,7 @@ const data9 = d3
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight2})`)
       .call(
-        d3
-          .axisBottom(x)
-          .tickValues([0.2, 0.4, 0.6, 0.8])
-          .tickSize(0)
-          .tickPadding(10)
+        d3.axisBottom(x).tickValues([0.2, 0.8]).tickSize(0).tickPadding(10)
       );
 
     innerChart9

@@ -6,7 +6,6 @@ This repository includes a collection of d3.js data visulaisations, which can be
 
 - [Area chart](js/areachart.js)
 - [Lollipop chart](js/lollipop.js)
-- [Barchart](js/barchart.js)
 - [Scatter plot](js/scatterplot.js)
 - [Timeline scatter plot](js/timeline_scatterplot.js)
 
@@ -16,6 +15,7 @@ This repository includes a collection of d3.js data visulaisations, which can be
 - [Histogram](js/histogram.js)
 - [Sankey](js/sankey.js)
 - [Scatter plot](js/scatterplot1.js)
+- [Barchart](js/barchart.js)
 
 ### To do visualisations
 
