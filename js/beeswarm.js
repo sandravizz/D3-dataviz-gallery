@@ -28,7 +28,7 @@ const data7 = d3
     let data = data7.filter((d) => d.Gini > 0 && d.region !== null);
 
     let region = d3.groups(data7, (d) => d.Region).map((d) => d[0]);
-    console.log(region);
+    // console.log(region);
 
     // --------------------------------------
     //  Scales

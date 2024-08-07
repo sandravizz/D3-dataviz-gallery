@@ -154,8 +154,8 @@ h3 {
 
 .x-axis line {
 	fill: none;
-	stroke-width: 0;
-	stroke-opacity: 1;
+	stroke-width: 0.5;
+	stroke-opacity: 0.5;
 	stroke: white;
 }
 
