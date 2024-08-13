@@ -11,6 +11,21 @@ const innerChart6 = svg6
   .append("g")
   .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
+var count = 0;
+
+function uid(name) {
+  return new Id("O-" + (name == null ? "" : name + "-") + ++count);
+}
+
+function Id(id) {
+  this.id = id;
+  this.href = new URL(`#${id}`, location) + "";
+}
+
+Id.prototype.toString = function () {
+  return "url(" + this.href + ")";
+};
+
 // --------------------------------------
 // Data loading
 // --------------------------------------
@@ -33,6 +48,8 @@ const data6 = d3
     console.log(startColor);
     const endColor = d3.schemeCategory10[4];
     console.log(endColor);
+    const gradientIds = data.map(() => uid("gradient"));
+    console.log(gradientIds);
     // const arrowId = DOM.uid("arrow");
     // console.log(arrowId);
 
@@ -78,6 +95,30 @@ const data6 = d3
       .call(d3.axisLeft(y).tickSize(-innerwidth2).tickPadding(0).ticks(3));
 
     innerChart6
+      .append("defs")
+      .selectAll()
+      .data(data)
+      .join("linearGradient")
+      .attr("id", (d, i) => gradientIds[i].id)
+      .attr("gradientUnits", "userSpaceOnUse")
+      .attr("x1", (d) => x(d.POP_1980))
+      .attr("x2", (d) => x(d.POP_2015))
+      .attr("y1", (d) => y(d.R90_10_1980))
+      .attr("y2", (d) => y(d.R90_10_2015))
+      .call((g) =>
+        g
+          .append("stop")
+          .attr("stop-color", d3.schemeCategory10[2])
+          .attr("stop-opacity", 0.3)
+      )
+      .call((g) =>
+        g
+          .append("stop")
+          .attr("offset", "100%")
+          .attr("stop-color", d3.schemeCategory10[4])
+      );
+
+    innerChart6
       .selectAll()
       .data(data)
       .join("circle")
@@ -119,7 +160,7 @@ const data6 = d3
       .data(data)
       .join("path")
       .attr("stroke", "green")
-      /*.attr("stroke", (d, i) => gradientIds[i])*/
+      .attr("stroke", (d, i) => console.log(gradientIds[i]) || gradientIds[i])
       /*.attr("marker-end", arrowId)*/
       .attr("d", (d) =>
         arc(x(d.POP_1980), y(d.R90_10_1980), x(d.POP_2015), y(d.R90_10_2015))
