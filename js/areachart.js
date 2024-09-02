@@ -19,22 +19,22 @@ let areaGradient = innerChart0
   .append("defs")
   .append("linearGradient")
   .attr("id", "areaGradient")
-  .attr("x1", "0%")
-  .attr("y1", "0%")
+  .attr("x1", "100%")
+  .attr("y1", "10%")
   .attr("x2", "0%")
   .attr("y2", "100%");
 
 areaGradient
   .append("stop")
   .attr("offset", 0.2)
-  .attr("stop-color", "#f20666")
+  .attr("stop-color", "#F20666")
   .attr("stop-opacity", 1);
 
 areaGradient
   .append("stop")
   .attr("offset", 1)
-  .attr("stop-color", "#f20666")
-  .attr("stop-opacity", 0);
+  .attr("stop-color", "#06D6A0")
+  .attr("stop-opacity", 1);
 
 // --------------------------------------
 // Data loading

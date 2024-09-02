@@ -12,7 +12,6 @@
   </head>
 
   <body>
-    <!--<div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;"><h1 style="display: none;">Inequality in American cities</h1><a href="https://d3js.org/">D3</a> › <a href="/@d3/gallery">Gallery</a></div>-->
     <div class="container">
       <h1>Overview chart templates | d3.js</h1>
 
@@ -23,6 +22,33 @@
           chart shows the same data as the area chart above.
         </p>
         <div id="chart1"></div>
+      </div>
+
+      <div>
+        <h3>Area chart (color gradient)</h3>
+        <p class="chart_title">
+          The area chart is perfect for showing time series data. The gradient
+          helps to focus on the edges, which is, where the actual movement is
+          visiable. This chart shows the gini (income) for Germany from
+          1980-2022.
+        </p>
+        <div id="chart0"></div>
+      </div>
+
+      <div>
+        <h3>Connected scatterplot</h3>
+        <p class="chart_title">
+          The connected scatterplot the evolution of two numeric variables from
+          one moment in time to another one. In this example from 1980 to 2023.
+        </p>
+        <p class="chart_title"></p>
+        <div id="chart6"></div>
+      </div>
+
+      <div>
+        <h3>Heatmap</h3>
+        <p class="chart_title">xxx</p>
+        <div id="chart7"></div>
       </div>
 
       <div>
@@ -41,40 +67,23 @@
       </div>
 
       <div>
-        <h3>Area chart (color gradient)</h3>
-        <p class="chart_title">
-          The area chart is perfect for showing time series data. The gradient
-          helps to focus on the edges, which is, where the actual movement is
-          visiable. This chart shows the gini (income) for Germany from
-          1980-2022.
-        </p>
-        <div id="chart0"></div>
-      </div>
-
-      <div>
         <h3>Beeswarm</h3>
         <p class="chart_title">The beeswarm ...</p>
         <div id="chart5"></div>
       </div>
     </div>
 
-    <div>
-      <h3>Connected scatterplot</h3>
-      <p class="chart_title"></p>
-      <div id="chart6"></div>
-    </div>
-
     <script src="js/d3-sankey.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+    <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
-
     <script src="js/global_variables.js"></script>
+    <script src="js/heatmap.js"></script>
     <script src="js/areachart.js"></script>
     <script src="js/scatterplot_connected.js"></script>
     <script src="js/lollipop.js"></script>
     <script src="js/timeline_scatterplot.js"></script>
-    <script src="js/barchart.js"></script>
     <script src="js/scatterplot1.js"></script>
     <script src="js/beeswarm.js"></script>
   </body>

@@ -41,7 +41,7 @@ const data9 = d3
     let c = d3
       .scaleOrdinal()
       .domain(["Asia", "Europe", "Africa", "Americas", "Oceania"])
-      .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1155F2"]);
+      .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1E96FC"]);
 
     // --------------------------------------
     //  Axes
@@ -126,7 +126,7 @@ const data9 = d3
         id: "Oceania",
         label: "Oceania",
         isActive: false,
-        backgroundcolor: "#1155F2",
+        backgroundcolor: "#1E96FC",
       },
     ];
 
@@ -136,6 +136,6 @@ const data9 = d3
       .join("button")
       .attr("id", (d) => d.id)
       .text((d) => d.label)
-      .style("color", "#00161f")
-      .style("background-color", (d) => d.backgroundcolor);
+      .style("color", (d) => d.backgroundcolor)
+      .style("background-color", "#131B26");
   });

@@ -9,7 +9,7 @@ html {
 body {
 	margin: 70px;
 	color: #f6fcff;
-	background-color: #022859;
+	background-color: #131b26;
 	font-family: 'Montserrat Alternates', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -165,15 +165,7 @@ h3 {
 	stroke: white;
 }
 
-/*--------------------------------------*/
-/* Line stylings */
-/*--------------------------------------*/
 
-.line {
-	fill-opacity:0;
-	stroke-width: 0.5px;
-	stroke:#f20666;
- }
 
 /*--------------------------------------*/
 /* Button stylings */

@@ -45,7 +45,7 @@ const data3 = d3
     let r1 = d3
       .scaleSqrt()
       .domain([0, d3.max(data, (d) => d.Gini)])
-      .range([0, 4]);
+      .range([0, 6]);
 
     // --------------------------------------
     //  Axes
@@ -69,9 +69,9 @@ const data3 = d3
             parseDate(2015),
             parseDate(2020),
           ])
-          .tickSize(5)
+          .tickSize(0)
           .tickFormat(formatDate)
-          .tickPadding(0)
+          .tickPadding(10)
       );
 
     // --------------------------------------
@@ -88,7 +88,7 @@ const data3 = d3
       .attr("y1", innerheight)
       .attr("y2", innerheight)
       .attr("stroke", "#f20666")
-      .attr("stroke-width", 0.5)
+      .attr("stroke-width", 2)
       .attr("opacity", 1)
       .transition()
       .delay((d) => 500 + x(d.Year) * 3.6)

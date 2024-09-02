@@ -45,11 +45,11 @@ const data6 = d3
     // console.log(data);
 
     const startColor = d3.schemeCategory10[2];
-    console.log(startColor);
+    // console.log(startColor);
     const endColor = d3.schemeCategory10[4];
-    console.log(endColor);
+    // console.log(endColor);
     const gradientIds = data.map(() => uid("gradient"));
-    console.log(gradientIds);
+    // console.log(gradientIds);
     // const arrowId = DOM.uid("arrow");
     // console.log(arrowId);
 
@@ -75,24 +75,13 @@ const data6 = d3
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight2})`)
-      .call(
-        d3
-          .axisBottom(x)
-          //   .tickValues([
-          //     200000, 300000, 400000, 500000, 600000, 700000, 800000, 1000000,
-          //     2000000, 3000000, 4000000, 5000000, 6000000, 7000000, 8000000,
-          //     10000000, 20000000,
-          //   ])
-          .ticks(5)
-          .tickSize(-innerheight2)
-          .tickPadding(0)
-      );
+      .call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10));
 
     innerChart6
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(0, 5)`)
-      .call(d3.axisLeft(y).tickSize(-innerwidth2).tickPadding(0).ticks(3));
+      .call(d3.axisLeft(y).tickSize(0).tickPadding(10).ticks(3));
 
     innerChart6
       .append("defs")
@@ -106,24 +95,18 @@ const data6 = d3
       .attr("y1", (d) => y(d.R90_10_1980))
       .attr("y2", (d) => y(d.R90_10_2015))
       .call((g) =>
-        g
-          .append("stop")
-          .attr("stop-color", d3.schemeCategory10[2])
-          .attr("stop-opacity", 0.3)
+        g.append("stop").attr("stop-color", "#F20666").attr("stop-opacity", 0.3)
       )
       .call((g) =>
-        g
-          .append("stop")
-          .attr("offset", "100%")
-          .attr("stop-color", d3.schemeCategory10[4])
+        g.append("stop").attr("offset", "100%").attr("stop-color", "#06D6A0")
       );
 
     innerChart6
       .selectAll()
       .data(data)
       .join("circle")
-      .attr("r", 1.75)
-      .attr("fill", "white")
+      .attr("r", 1)
+      .attr("fill", "#F20666")
       .attr("cx", (d) => x(d.POP_1980))
       .attr("cy", (d) => y(d.R90_10_1980));
 
@@ -131,8 +114,8 @@ const data6 = d3
       .selectAll()
       .data(data)
       .join("circle")
-      .attr("r", 1.75)
-      .attr("fill", "green")
+      .attr("r", 1)
+      .attr("fill", "#06D6A0")
       .attr("cx", (d) => x(d.POP_2015))
       .attr("cy", (d) => y(d.R90_10_2015));
 
@@ -144,6 +127,7 @@ const data6 = d3
       .join("text")
       .attr("fill", "white")
       .attr("dy", (d) => (d.R90_10_1980 > d.R90_10_2015 ? "1.2em" : "-0.5em"))
+      .attr("dx", (d) => "-1.5em")
       .attr("x", (d) => x(d.POP_2015))
       .attr("y", (d) => y(d.R90_10_2015))
       .text((d) => d.nyt_display);
@@ -160,8 +144,10 @@ const data6 = d3
       .data(data)
       .join("path")
       .attr("stroke", "green")
-      .attr("stroke", (d, i) => console.log(gradientIds[i]) || gradientIds[i])
-      /*.attr("marker-end", arrowId)*/
+      .attr(
+        "stroke",
+        (d, i) => /*console.log(gradientIds[i]) ||*/ gradientIds[i]
+      )
       .attr("d", (d) =>
         arc(x(d.POP_1980), y(d.R90_10_1980), x(d.POP_2015), y(d.R90_10_2015))
       );
