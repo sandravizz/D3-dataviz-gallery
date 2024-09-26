@@ -25,7 +25,7 @@ const data20 = d3
   })
   .then((data20) => {
     let data = data20.filter((d) => d.value > 0);
-    console.log(data);
+    // console.log(data);
 
     // --------------------------------------
     // Tooltip

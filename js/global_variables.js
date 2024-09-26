@@ -16,6 +16,10 @@ const height2 = 450;
 const innerwidth2 = width2 - margin2.left - margin2.right;
 const innerheight2 = height2 - margin2.top - margin2.bottom;
 
+//Small mutiple
+const margin3 = { top: 30, right: 10, bottom: 10, left: 40 };
+const width3 = 180;
+const height3 = 200;
 // --------------------------------------
 //  Formating
 // --------------------------------------
