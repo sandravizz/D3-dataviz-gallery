@@ -43,4 +43,4 @@ This repository includes a collection of d3.js data visulaisations, which can be
 
 Made with :green_heart: by [Sandraviz](https://www.sandraviz.com/bio)
 
-Follow me: [twitter](https://twitter.com/SandraCrypto), [linkedin](https://www.linkedin.com/in/sandradataviz/) and [observable](https://observablehq.com/@sandraviz)
+Follow me: [linkedin](https://www.linkedin.com/in/sandradataviz/) and [observable](https://observablehq.com/@sandraviz)
