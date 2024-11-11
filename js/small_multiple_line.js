@@ -16,7 +16,7 @@ const data22 = d3
     let data = data22.filter((d) => d.n > 0);
 
     const sumstat = d3.group(data, (d) => d.name);
-    console.log(sumstat);
+    // console.log(sumstat);
 
     const svg = d3
       .select("#chart9")

@@ -27,10 +27,10 @@ const data21 = d3
   })
   .then((data21) => {
     let data = data21.filter((d) => d.n > 0);
-    console.log(data);
+    // console.log(data);
 
     const sumstat = d3.group(data, (d) => d.name);
-    console.log(sumstat);
+    // console.log(sumstat);
 
     // --------------------------------------
     // Scales
