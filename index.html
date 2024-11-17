@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Overview of chart templates with d3.js</title>
+    <title>One page full of d3.js dataviz</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
       rel="stylesheet"
@@ -13,7 +13,11 @@
 
   <body>
     <div class="container">
-      <h1>Overview chart templates | d3.js</h1>
+      <h1>One page full of d3.js dataviz</h1>
+      <p class="chart_title">
+        The page includes a lot of data visualisation examples. The idea is to
+        get an inspiration of static and dynamic visualisation types.
+      </p>
 
       <div>
         <h3>Lollipop chart (animated)</h3>
@@ -21,7 +25,22 @@
           The lollipop chart emphasis the focus on the single data points. This
           chart shows the same data as the area chart above.
         </p>
-        <div id="chart1"></div>
+        <div id="chart_lollipop"></div>
+      </div>
+
+      <div>
+        <h3>Heatmap (tooltip)</h3>
+        <p class="chart_title">
+          Two categorial variables wrok really well in this visualisation type.
+          The color can then show another thrid varialbe or the frequency.
+        </p>
+        <div id="chart_heatmap"></div>
+      </div>
+
+      <div>
+        <h3>Timeline scatter plot</h3>
+        <div id="filters"></div>
+        <div id="chart3"></div>
       </div>
 
       <div>
@@ -32,36 +51,27 @@
           visiable. This chart shows the gini (income) for Germany from
           1980-2022.
         </p>
-        <div id="chart0"></div>
+        <div id="chart_area_gradient"></div>
       </div>
 
       <div>
-        <h3>Connected scatterplot</h3>
+        <h3>Line chart (Multi)</h3>
+        <p class="chart_title">A line chart for different categories.</p>
+        <div id="chart_linechart_multi"></div>
+      </div>
+
+      <div>
+        <h3>Scatterplot (connected)</h3>
         <p class="chart_title">
           The connected scatterplot the evolution of two numeric variables from
           one moment in time to another one. In this example from 1980 to 2023.
         </p>
         <p class="chart_title"></p>
-        <div id="chart6"></div>
+        <div id="chart_scatterplot_connected"></div>
       </div>
 
       <div>
-        <h3>Heatmap</h3>
-        <p class="chart_title">
-          Two categorial variables wrok really well in this visualisation type.
-          The color can then show another thrid varialbe or the frequency.
-        </p>
-        <div id="chart7"></div>
-      </div>
-
-      <div>
-        <h3>Multi line chart</h3>
-        <p class="chart_title">A line chart for different categories.</p>
-        <div id="chart8"></div>
-      </div>
-
-      <div>
-        <h3>Small multiple line chart</h3>
+        <h3>Line chart (small multiple)</h3>
         <p class="chart_title"></p>
         <div id="chart9"></div>
       </div>
@@ -70,13 +80,6 @@
         <h3>Arc line</h3>
         <p class="chart_title"></p>
         <div id="chart10"></div>
-      </div>
-
-      <div>
-        <h3>Timeline scatter plot</h3>
-        <p class="chart_title">The timeline scatter plot shows ...</p>
-        <div id="filters"></div>
-        <div id="chart3"></div>
       </div>
 
       <div>

@@ -5,11 +5,11 @@
 const svg9 = d3
   .select("#chart3")
   .append("svg")
-  .attr("viewBox", [0, 0, width2, height2]);
+  .attr("viewBox", [0, 0, width, height]);
 
 const innerChart9 = svg9
   .append("g")
-  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // --------------------------------------
 //  Data loading
@@ -34,9 +34,9 @@ const data9 = d3
     let y = d3
       .scaleTime()
       .domain(d3.extent(data, (d) => d.Year))
-      .range([0, innerheight2]);
+      .range([0, innerheight]);
 
-    let x = d3.scaleLinear().domain([0, 1]).range([0, innerwidth2]);
+    let x = d3.scaleLinear().domain([0.1, 0.7]).range([0, innerwidth]);
 
     let c = d3
       .scaleOrdinal()
@@ -50,9 +50,9 @@ const data9 = d3
     innerChart9
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", `translate(0, ${innerheight2})`)
+      .attr("transform", `translate(0, ${innerheight})`)
       .call(
-        d3.axisBottom(x).tickValues([0.2, 0.8]).tickSize(0).tickPadding(10)
+        d3.axisBottom(x).tickValues([0.2, 0.6]).tickSize(0).tickPadding(10)
       );
 
     innerChart9
@@ -89,8 +89,8 @@ const data9 = d3
       .attr("class", "rect")
       .attr("x", (d) => x(d.Gini))
       .attr("y", (d) => y(d.Year))
-      .attr("width", 2.5)
-      .attr("height", 7.5)
+      .attr("width", 2)
+      .attr("height", 4)
       .attr("fill", (d) => c(d.Region));
 
     // --------------------------------------

@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg21 = d3
-  .select("#chart8")
+const svg_linechart_multi = d3
+  .select("#chart_linechart_multi")
   .append("svg")
   .attr("viewBox", [0, 0, width2, height2]);
 
-const innerChart21 = svg21
+const innerChart_linechart_multi = svg_linechart_multi
   .append("g")
   .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
@@ -15,7 +15,7 @@ const innerChart21 = svg21
 // Data loading
 // --------------------------------------
 
-const data21 = d3
+const data_linechart_multi = d3
   .csv("../data/multiline.csv", (d) => {
     return {
       year: +d.year,
@@ -25,8 +25,8 @@ const data21 = d3
       prop: +d.prop,
     };
   })
-  .then((data21) => {
-    let data = data21.filter((d) => d.n > 0);
+  .then((data_linechart_multi) => {
+    let data = data_linechart_multi.filter((d) => d.n > 0);
     // console.log(data);
 
     const sumstat = d3.group(data, (d) => d.name);
@@ -50,31 +50,17 @@ const data21 = d3
 
     // console.log(y(50));
 
-    let c = d3
-      .scaleOrdinal()
-      .range([
-        "#e41a1c",
-        "#377eb8",
-        "#4daf4a",
-        "#984ea3",
-        "#ff7f00",
-        "#ffff33",
-        "#a65628",
-        "#f781bf",
-        "#999999",
-      ]);
-
     // --------------------------------------
     //  Axes
     // --------------------------------------
 
-    innerChart21
+    innerChart_linechart_multi
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight2})`)
-      .call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(0));
+      .call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10));
 
-    innerChart21
+    innerChart_linechart_multi
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(0, 0)`)
@@ -90,12 +76,12 @@ const data21 = d3
     // Line and area drawing
     // --------------------------------------
 
-    innerChart21
+    innerChart_linechart_multi
       .selectAll(".line")
       .data(sumstat)
       .join("path")
       .attr("fill", "none")
-      .attr("stroke", (d) => c(d[0]))
+      .attr("stroke", "#f20666")
       .attr("d", (d) =>
         d3
           .line()

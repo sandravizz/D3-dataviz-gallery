@@ -3,7 +3,7 @@
 // --------------------------------------
 
 const svg6 = d3
-  .select("#chart6")
+  .select("#chart_scatterplot_connected")
   .append("svg")
   .attr("viewBox", [0, 0, width2, height2]);
 

@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg3 = d3
-  .select("#chart1")
+const svg_lollipop = d3
+  .select("#chart_lollipop")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-const innerChart3 = svg3
+const innerChart_lollipop = svg_lollipop
   .append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -15,7 +15,7 @@ const innerChart3 = svg3
 //  Data loading
 // --------------------------------------
 
-const data3 = d3
+const data_lollipop = d3
   .csv("../data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
@@ -25,8 +25,8 @@ const data3 = d3
       Year: parseDate(d.year),
     };
   })
-  .then((data3) => {
-    let data = data3.filter((d) => d.Country == "DE");
+  .then((data_lollipop) => {
+    let data = data_lollipop.filter((d) => d.Country == "DE");
 
     // --------------------------------------
     //  Scales
@@ -51,7 +51,7 @@ const data3 = d3
     //  Axes
     // --------------------------------------
 
-    innerChart3
+    innerChart_lollipop
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight})`)
@@ -78,7 +78,7 @@ const data3 = d3
     //  data drawing
     // --------------------------------------
 
-    innerChart3
+    innerChart_lollipop
       .selectAll(".line")
       .data(data)
       .join("line")
@@ -87,15 +87,15 @@ const data3 = d3
       .attr("x2", (d) => x(d.Year))
       .attr("y1", innerheight)
       .attr("y2", innerheight)
-      .attr("stroke", "#f20666")
-      .attr("stroke-width", 2)
+      .attr("stroke", "#06D6A0")
+      .attr("stroke-width", 1)
       .attr("opacity", 1)
       .transition()
       .delay((d) => 500 + x(d.Year) * 3.6)
       .duration(1000)
       .attr("y2", (d) => y(d.Gini) + r1(d.Gini));
 
-    innerChart3
+    innerChart_lollipop
       .selectAll(".cost_circle")
       .data(data)
       .join("circle")
@@ -103,10 +103,10 @@ const data3 = d3
       .attr("cx", (d) => x(d.Year))
       .attr("cy", (d) => y(d.Gini))
       .attr("r", 0)
-      .attr("fill", "#f20666")
+      .attr("fill", "#06D6A0")
       .attr("fill-opacity", 1)
-      .attr("stroke", "#f20666")
-      .attr("stroke-width", 0.2)
+      .attr("stroke", "#06D6A0")
+      .attr("stroke-width", 1)
       .transition()
       .delay((d) => 500 + x(d.Year) * 5)
       .duration(1000)

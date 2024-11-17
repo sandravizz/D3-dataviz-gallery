@@ -2,20 +2,20 @@
 //  Canvas
 // --------------------------------------
 
-const svg20 = d3
-  .select("#chart7")
+const svg_heat = d3
+  .select("#chart_heatmap")
   .append("svg")
-  .attr("viewBox", [0, 0, width2, height2]);
+  .attr("viewBox", [0, 0, width, height]);
 
-const innerChart20 = svg20
+const innerChart_heat = svg_heat
   .append("g")
-  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // --------------------------------------
 //  Data loading
 // --------------------------------------
 
-const data20 = d3
+const data_heat = d3
   .csv("../data/heatmap.csv", (d) => {
     return {
       group: d.group,
@@ -23,8 +23,8 @@ const data20 = d3
       value: +d.value,
     };
   })
-  .then((data20) => {
-    let data = data20.filter((d) => d.value > 0);
+  .then((data_heat) => {
+    let data = data_heat.filter((d) => d.value > 0);
     // console.log(data);
 
     // --------------------------------------
@@ -39,7 +39,7 @@ const data20 = d3
           `<div>Cat1 ${d.group}<br>Cat2 ${d.variable}</br>Value ${d.value}</div>`
       );
 
-    innerChart20.call(tooltip);
+    innerChart_heat.call(tooltip);
 
     // --------------------------------------
     // Scales
@@ -50,17 +50,9 @@ const data20 = d3
     // console.log(myGroups);
     // console.log(myVars);
 
-    let x = d3
-      .scaleBand()
-      .domain(myGroups)
-      .range([0, innerwidth2])
-      .padding(0.05);
+    let x = d3.scaleBand().domain(myGroups).range([0, innerwidth]).padding(0.5);
 
-    let y = d3
-      .scaleBand()
-      .domain(myVars)
-      .range([innerheight2, 0])
-      .padding(0.05);
+    let y = d3.scaleBand().domain(myVars).range([innerheight, 0]).padding(0.05);
 
     let c = d3
       .scaleLinear()
@@ -71,13 +63,13 @@ const data20 = d3
     //  Axes
     // --------------------------------------
 
-    innerChart20
+    innerChart_heat
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", `translate(0, ${innerheight2})`)
+      .attr("transform", `translate(0, ${innerheight})`)
       .call(d3.axisBottom(x).ticks(0).tickSize(0).tickPadding(10));
 
-    innerChart20
+    innerChart_heat
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(0, 5)`)
@@ -87,7 +79,7 @@ const data20 = d3
     // Rect drawing
     // --------------------------------------
 
-    innerChart20
+    innerChart_heat
       .selectAll(".heatmap")
       .data(data)
       .join("rect")

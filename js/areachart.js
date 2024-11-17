@@ -3,7 +3,7 @@
 // --------------------------------------
 
 const svg0 = d3
-  .select("#chart0")
+  .select("#chart_area_gradient")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
