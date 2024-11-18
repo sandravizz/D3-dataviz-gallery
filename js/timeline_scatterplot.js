@@ -64,7 +64,7 @@ const data_scatterplot_time = d3
           .axisRight(y)
           .tickSize(0)
           .tickFormat(formatDate)
-          .tickPadding(0)
+          .tickPadding(-15)
           .tickValues([
             parseDate(1980),
             parseDate(1985),
@@ -89,8 +89,8 @@ const data_scatterplot_time = d3
       .attr("class", "rect")
       .attr("x", (d) => x(d.Gini))
       .attr("y", (d) => y(d.Year))
-      .attr("width", 2)
-      .attr("height", 4)
+      .attr("width", 1.5)
+      .attr("height", 1.5)
       .attr("fill", (d) => c(d.Region));
 
     // --------------------------------------

@@ -112,9 +112,9 @@ const data0 = d3
             parseDate(2015),
             parseDate(2020),
           ])
-          .tickSize(5)
+          .tickSize(0)
           .tickFormat(formatDate)
-          .tickPadding(0)
+          .tickPadding(10)
       );
 
     // --------------------------------------

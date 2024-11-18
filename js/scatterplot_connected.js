@@ -127,7 +127,7 @@ const data_scatterplot_connected = d3
       .selectAll()
       .data(data.filter((d) => d.highlight))
       .join("text")
-      .attr("class", "chart_text")
+      .attr("class", "text")
       .attr("fill", "white")
       .attr("dy", (d) => (d.R90_10_1980 > d.R90_10_2015 ? "1.2em" : "-0.5em"))
       .attr("dx", (d) => "-1.5em")

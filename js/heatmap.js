@@ -50,14 +50,18 @@ const data_heat = d3
     // console.log(myGroups);
     // console.log(myVars);
 
-    let x = d3.scaleBand().domain(myGroups).range([0, innerwidth]).padding(0.5);
+    let x = d3
+      .scaleBand()
+      .domain(myGroups)
+      .range([0, innerwidth])
+      .padding(0.05);
 
     let y = d3.scaleBand().domain(myVars).range([innerheight, 0]).padding(0.05);
 
     let c = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => d.value))
-      .range(["#06D6A0", "#F20666"]);
+      .range(["#f20666", "#06d6a0"]);
 
     // --------------------------------------
     //  Axes
@@ -86,8 +90,8 @@ const data_heat = d3
       .attr("class", "heatmap")
       .attr("x", (d) => x(d.group))
       .attr("y", (d) => y(d.variable))
-      .attr("rx", 4)
-      .attr("ry", 4)
+      .attr("rx", 2)
+      .attr("ry", 2)
       .attr("width", x.bandwidth())
       .attr("height", y.bandwidth())
       .style("fill", (d) => c(d.value))
