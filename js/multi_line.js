@@ -5,11 +5,11 @@
 const svg_linechart_multi = d3
   .select("#chart_linechart_multi")
   .append("svg")
-  .attr("viewBox", [0, 0, width2, height2]);
+  .attr("viewBox", [0, 0, width, height]);
 
 const innerChart_linechart_multi = svg_linechart_multi
   .append("g")
-  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // --------------------------------------
 // Data loading
@@ -18,7 +18,7 @@ const innerChart_linechart_multi = svg_linechart_multi
 const data_linechart_multi = d3
   .csv("../data/multiline.csv", (d) => {
     return {
-      year: +d.year,
+      year: parseDate(d.year),
       sex: d.sex,
       name: d.name,
       n: +d.n,
@@ -37,16 +37,16 @@ const data_linechart_multi = d3
     // --------------------------------------
 
     let x = d3
-      .scaleLinear()
+      .scaleTime()
       .domain(d3.extent(data, (d) => d.year))
-      .range([0, innerwidth2]);
+      .range([0, innerwidth]);
 
     // console.log(x(2000));
 
     let y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.n)])
-      .range([innerheight2, 0]);
+      .range([innerheight, 0]);
 
     // console.log(y(50));
 
@@ -57,7 +57,7 @@ const data_linechart_multi = d3
     innerChart_linechart_multi
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", `translate(0, ${innerheight2})`)
+      .attr("transform", `translate(0, ${innerheight})`)
       .call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10));
 
     innerChart_linechart_multi

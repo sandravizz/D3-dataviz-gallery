@@ -4,19 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>One page full of d3.js dataviz</title>
+    <meta name="keywords" content="d3, data visualisation, javascript" />
+    <meta name="author" content="SandraViz" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/pxn8wdc.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script>
+      document.documentElement.className = "js";
+    </script>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
     <div class="container">
-      <h1>One page full of d3.js dataviz</h1>
-      <p class="chart_title">
-        The page includes a lot of data visualisation examples. The idea is to
-        get an inspiration of static and dynamic visualisation types.
+      <h1>One d3.js dataviz page</h1>
+      <p class="intro_text">
+        With d3 we can draw on the screen, hence we are not limited to specific
+        chart types.
       </p>
 
       <div>
@@ -38,9 +45,9 @@
       </div>
 
       <div>
-        <h3>Timeline scatter plot</h3>
+        <h3>Scatter plot (time)</h3>
         <div id="filters"></div>
-        <div id="chart3"></div>
+        <div id="chart_scatterplot_time"></div>
       </div>
 
       <div>
@@ -61,7 +68,7 @@
       </div>
 
       <div>
-        <h3>Scatterplot (connected)</h3>
+        <h3>Scatter plot (connected)</h3>
         <p class="chart_title">
           The connected scatterplot the evolution of two numeric variables from
           one moment in time to another one. In this example from 1980 to 2023.
@@ -73,7 +80,7 @@
       <div>
         <h3>Line chart (small multiple)</h3>
         <p class="chart_title"></p>
-        <div id="chart9"></div>
+        <div id="chart_linechart_smallmulti"></div>
       </div>
 
       <div>

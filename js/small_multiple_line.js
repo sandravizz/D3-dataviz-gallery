@@ -18,8 +18,8 @@ const data22 = d3
     const sumstat = d3.group(data, (d) => d.name);
     // console.log(sumstat);
 
-    const svg = d3
-      .select("#chart9")
+    const svg_linechart_smallmulti = d3
+      .select("#chart_linechart_smallmulti")
       .selectAll("uniqueChart")
       .data(sumstat)
       .join("svg")
@@ -64,13 +64,13 @@ const data22 = d3
     //  Axes
     // --------------------------------------
 
-    svg
+    svg_linechart_smallmulti
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, 200)`)
       .call(d3.axisBottom(x).ticks(2).tickSize(0).tickPadding(0));
 
-    svg
+    svg_linechart_smallmulti
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(0, 0)`)
@@ -86,7 +86,7 @@ const data22 = d3
     // Line and area drawing
     // --------------------------------------
 
-    svg
+    svg_linechart_smallmulti
       .append("path")
       .attr("fill", "none")
       .attr("stroke", (d) => c(d[0]))
@@ -97,7 +97,7 @@ const data22 = d3
           .y((d) => y(d.n))(d[1])
       );
 
-    svg
+    svg_linechart_smallmulti
       .append("text")
       .attr("text-anchor", "start")
       .attr("y", -5)

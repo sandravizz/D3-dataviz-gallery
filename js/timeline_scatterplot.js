@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg9 = d3
-  .select("#chart3")
+const svg_scatterplot_time = d3
+  .select("#chart_scatterplot_time")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-const innerChart9 = svg9
+const innerChart_scatterplot_time = svg_scatterplot_time
   .append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -15,7 +15,7 @@ const innerChart9 = svg9
 //  Data loading
 // --------------------------------------
 
-const data9 = d3
+const data_scatterplot_time = d3
   .csv("../data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
@@ -24,8 +24,8 @@ const data9 = d3
       Year: parseDate(d.year),
     };
   })
-  .then((data9) => {
-    let data = data9.filter((d) => d.Gini > 0);
+  .then((data_scatterplot_time) => {
+    let data = data_scatterplot_time.filter((d) => d.Gini > 0);
 
     // --------------------------------------
     //  Scales
@@ -47,7 +47,7 @@ const data9 = d3
     //  Axes
     // --------------------------------------
 
-    innerChart9
+    innerChart_scatterplot_time
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight})`)
@@ -55,7 +55,7 @@ const data9 = d3
         d3.axisBottom(x).tickValues([0.2, 0.6]).tickSize(0).tickPadding(10)
       );
 
-    innerChart9
+    innerChart_scatterplot_time
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(0, 5)`)
@@ -82,7 +82,7 @@ const data9 = d3
     //  Data drawing
     // --------------------------------------
 
-    innerChart9
+    innerChart_scatterplot_time
       .selectAll(".rect")
       .data(data)
       .join("rect")
