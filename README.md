@@ -41,6 +41,8 @@ This repository includes a collection of d3.js data visulaisations, which can be
 - [Heatmap](https://observablehq.com/d/17e6f8deba1d2557)
 - [Circular bar chart](https://d3-graph-gallery.com/graph/circular_barplot_double.html)
 
-Made with :green_heart: by [Sandraviz](https://www.sandraviz.com/bio)
+---
 
-Follow me: [linkedin](https://www.linkedin.com/in/sandradataviz/) and [observable](https://observablehq.com/@sandraviz)
+Made with :green_heart: by [Sandra](https://www.sandraviz.com)
+
+I am available for freelance data visualization work. Please [contact me](https://www.sandraviz.com/contact) in case you would like me to help you with my experience and expertise or [follow](https://bsky.app/profile/sandraviz.bsky.social) and [connect](https://www.linkedin.com/in/sandradataviz/) with me.
