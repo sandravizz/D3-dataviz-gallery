@@ -16,7 +16,7 @@ const innerChart_lollipop = svg_lollipop
 // --------------------------------------
 
 const data_lollipop = d3
-  .csv("../data/data_all.csv", (d) => {
+  .csv("data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
       Country: d.country,
