@@ -5,11 +5,11 @@
 const svg_arc_diagram = d3
   .select("#chart_arc_diagram")
   .append("svg")
-  .attr("viewBox", [0, 0, width2, height2]);
+  .attr("viewBox", [0, 0, width, height]);
 
 const innerChart_arc_diagram = svg_arc_diagram
   .append("g")
-  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // --------------------------------------
 // Data loading
@@ -33,10 +33,10 @@ const data_arc_diagram = d3
     // Scales
     // --------------------------------------
 
-    var x = d3.scalePoint().range([0, innerwidth2]).domain(allNodes);
+    var x = d3.scalePoint().range([0, innerwidth]).domain(allNodes);
 
     // --------------------------------------
-    // Circle, label and path drawing
+    // Circle and label drawing
     // --------------------------------------
 
     innerChart_arc_diagram
@@ -44,7 +44,7 @@ const data_arc_diagram = d3
       .data(data.nodes)
       .join("circle")
       .attr("cx", (d) => x(d.name))
-      .attr("cy", innerheight2)
+      .attr("cy", innerheight)
       .attr("r", 8)
       .style("fill", "#69b3a2");
 
@@ -54,9 +54,13 @@ const data_arc_diagram = d3
       .join("text")
       .attr("class", "label")
       .attr("x", (d) => x(d.name))
-      .attr("y", innerheight2 + 20)
+      .attr("y", innerheight + 20)
       .text((d) => d.name)
       .attr("fill", "white");
+
+    // --------------------------------------
+    // Path drawing
+    // --------------------------------------
 
     // Link between id and name
     var idToNode = {};
@@ -74,7 +78,7 @@ const data_arc_diagram = d3
         return [
           "M",
           start,
-          innerheight2,
+          innerheight,
           "A",
           (start - end) / 2,
           (start - end) / 2,
@@ -82,7 +86,7 @@ const data_arc_diagram = d3
           0,
           start < end ? 1 : 0,
           end,
-          innerheight2,
+          innerheight,
         ].join(" ");
       })
       .style("fill", "none")

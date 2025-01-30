@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg7 = d3
+const svg_chart_beeswarm = d3
   .select("#chart5")
   .append("svg")
   .attr("viewBox", [0, 0, width2, height2]);
 
-const innerChart7 = svg7
+const innerChart_beeswarm = svg_chart_beeswarm
   .append("g")
   .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
@@ -15,7 +15,7 @@ const innerChart7 = svg7
 // Data
 // --------------------------------------
 
-const data7 = d3
+const data_beeswarm = d3
   .csv("../data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
@@ -24,10 +24,10 @@ const data7 = d3
       Year: parseDate(d.year),
     };
   })
-  .then((data7) => {
-    let data = data7.filter((d) => d.Gini > 0 && d.region !== null);
+  .then((data_beeswarm) => {
+    let data = data_beeswarm.filter((d) => d.Gini > 0 && d.region !== null);
 
-    let region = d3.groups(data7, (d) => d.Region).map((d) => d[0]);
+    let region = d3.groups(data_beeswarm, (d) => d.Region).map((d) => d[0]);
     // console.log(region);
 
     // --------------------------------------
@@ -41,21 +41,21 @@ const data7 = d3
 
     let r = d3
       .scaleSqrt()
-      .domain(d3.extent(data7, (d) => d.Gini))
+      .domain(d3.extent(data, (d) => d.Gini))
       .range([0.01, 4]);
 
     let y = d3.scaleBand().domain(region).range([innerheight2, 0]);
 
     let x = d3
       .scaleTime()
-      .domain(d3.extent(data7, (d) => d.Year))
+      .domain(d3.extent(data, (d) => d.Year))
       .range([0, innerwidth2]);
 
     // --------------------------------------
     //  Axes
     // --------------------------------------
 
-    innerChart7
+    innerChart_beeswarm
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight2})`)
@@ -78,7 +78,7 @@ const data7 = d3
           .tickPadding(0)
       );
 
-    innerChart7
+    innerChart_beeswarm
       .append("g")
       .attr("class", "y-axis")
       .attr("transform", `translate(-20, 0)`)
@@ -89,7 +89,7 @@ const data7 = d3
     // --------------------------------------
 
     const simulation = d3
-      .forceSimulation(data7)
+      .forceSimulation(data)
       .force("x", d3.forceX((d) => x(d.Year)).strength(0.09))
       .force("y", d3.forceY((d) => y(d.Region)).strength(0.6))
       .force("collide", d3.forceCollide((d) => r(d.Gini) + 0.1).strength(6));
@@ -102,9 +102,9 @@ const data7 = d3
     //  Drawing circles
     // --------------------------------------
 
-    innerChart7
+    innerChart_beeswarm
       .selectAll("circle")
-      .data(data7)
+      .data(data)
       .join("circle")
       .attr("cx", (d) => d.x)
       .attr("cy", (d) => d.y)
