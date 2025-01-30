@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg0 = d3
+const svg_area = d3
   .select("#chart_area_gradient")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-const innerChart0 = svg0
+const innerChart_area = svg_area
   .append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -15,7 +15,7 @@ const innerChart0 = svg0
 // Color gradient
 // --------------------------------------
 
-let areaGradient = innerChart0
+let areaGradient = innerChart_area
   .append("defs")
   .append("linearGradient")
   .attr("id", "areaGradient")
@@ -40,7 +40,7 @@ areaGradient
 // Data loading
 // --------------------------------------
 
-const data0 = d3
+const data_area = d3
   .csv("../data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
@@ -50,8 +50,8 @@ const data0 = d3
       Year: parseDate(d.year),
     };
   })
-  .then((data0) => {
-    let data = data0.filter((d) => d.Country == "DE");
+  .then((data_area) => {
+    let data = data_area.filter((d) => d.Country == "DE");
 
     // --------------------------------------
     // Scales
@@ -94,7 +94,7 @@ const data0 = d3
     //  Axes
     // --------------------------------------
 
-    innerChart0
+    innerChart_area
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", `translate(0, ${innerheight})`)
@@ -121,13 +121,13 @@ const data0 = d3
     // Line and area drawing
     // --------------------------------------
 
-    innerChart0
+    innerChart_area
       .append("path")
       .datum(data)
       .attr("class", "line")
       .attr("d", line);
 
-    innerChart0
+    innerChart_area
       .append("path")
       .datum(data)
       .attr("class", "area")

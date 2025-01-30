@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg22 = d3
-  .select("#chart10")
+const svg_arc_diagram = d3
+  .select("#chart_arc_diagram")
   .append("svg")
   .attr("viewBox", [0, 0, width2, height2]);
 
-const innerChart22 = svg22
+const innerChart_arc_diagram = svg_arc_diagram
   .append("g")
   .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
@@ -15,12 +15,12 @@ const innerChart22 = svg22
 // Data loading
 // --------------------------------------
 
-const data23 = d3
+const data_arc_diagram = d3
   .json(
     "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_network.json"
   )
-  .then(function (data23) {
-    let data = data23;
+  .then(function (data_arc_diagram) {
+    let data = data_arc_diagram;
     // console.log(data);
 
     var allNodes = data.nodes.map((d) => d.name);
@@ -39,7 +39,7 @@ const data23 = d3
     // Circle, label and path drawing
     // --------------------------------------
 
-    innerChart22
+    innerChart_arc_diagram
       .selectAll("mynodes")
       .data(data.nodes)
       .join("circle")
@@ -48,7 +48,7 @@ const data23 = d3
       .attr("r", 8)
       .style("fill", "#69b3a2");
 
-    innerChart22
+    innerChart_arc_diagram
       .selectAll("mylabels")
       .data(data.nodes)
       .join("text")
@@ -64,7 +64,7 @@ const data23 = d3
     // console.log(idToNode);
     // console.log(idToNode[2].name);
 
-    innerChart22
+    innerChart_arc_diagram
       .selectAll("mylinks")
       .data(data.links)
       .join("path")

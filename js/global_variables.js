@@ -2,14 +2,14 @@
 //  Margin and size
 // --------------------------------------
 
-//Simple charts (dont need much space)
+//Simple charts (small in terms of hight)
 const margin = { top: 10, right: 30, bottom: 20, left: 30 };
 const width = 900;
 const height = 150;
 const innerwidth = width - margin.left - margin.right;
 const innerheight = height - margin.top - margin.bottom;
 
-//More complex chart (need biiger visual space)
+//More complex chart (bigger in terms of hight)
 const margin2 = { top: 20, right: 30, bottom: 20, left: 60 };
 const width2 = 900;
 const height2 = 350;

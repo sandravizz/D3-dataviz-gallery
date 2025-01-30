@@ -4,14 +4,18 @@ This repository includes a collection of d3.js data visulaisations, which can be
 
 ### Finished visualisations
 
-- [Area chart](js/areachart.js)
 - [Lollipop chart](js/lollipop.js)
-- [Scatter plot](js/scatterplot.js)
+- [Connected scatter plot](js/scatterplot_connected.js.)
+- [Heatmap](js/heatmap.js)
+- [Area chart](js/areachart.js)
+- [Multi Line](js/multi_line.js)
+- [Small Multiple Line](js/small_multiple_line.js)
 - [Timeline scatter plot](js/timeline_scatterplot.js)
+- [Arc diagram](js/arc_diagram.js)
+- [Beeswarm](js/beewswarm.js)
 
 ### In progress visualisations
 
-- [Beeswarm](js/beewswarm.js)
 - [Histogram](js/histogram.js)
 - [Sankey](js/sankey.js)
 - [Scatter plot](js/scatterplot1.js)

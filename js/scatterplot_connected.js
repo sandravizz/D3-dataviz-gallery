@@ -5,11 +5,15 @@
 const svg_scatterplot_connected = d3
   .select("#chart_scatterplot_connected")
   .append("svg")
-  .attr("viewBox", [0, 0, width, height]);
+  .attr("viewBox", [0, 0, width2, height2]);
 
 const innerChart_scatterplot_connected = svg_scatterplot_connected
   .append("g")
-  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+
+// --------------------------------------
+// Preparation
+// --------------------------------------
 
 var count = 0;
 
@@ -60,12 +64,12 @@ const data_scatterplot_connected = d3
     const x = d3
       .scaleLog()
       .domain(d3.extent(data.flatMap((d) => [d.POP_1980, d.POP_2015])))
-      .range([0, innerwidth]);
+      .range([0, innerwidth2]);
 
     const y = d3
       .scaleLinear()
       .domain(d3.extent(data.flatMap((d) => [d.R90_10_1980, d.R90_10_2015])))
-      .range([innerheight, 0]);
+      .range([innerheight2, 0]);
 
     // --------------------------------------
     //  Axes
@@ -74,7 +78,7 @@ const data_scatterplot_connected = d3
     innerChart_scatterplot_connected
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", `translate(0, ${innerheight})`)
+      .attr("transform", `translate(0, ${innerheight2})`)
       .call(d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10));
 
     innerChart_scatterplot_connected
