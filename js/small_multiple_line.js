@@ -3,7 +3,7 @@
 // --------------------------------------
 
 const data_linechart_smallmulti = d3
-  .csv("../data/multiline.csv", (d) => {
+  .csv("./data/multiline.csv", (d) => {
     return {
       year: +d.year,
       sex: d.sex,

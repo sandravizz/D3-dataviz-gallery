@@ -16,7 +16,7 @@ const innerChart_linechart_multi = svg_linechart_multi
 // --------------------------------------
 
 const data_linechart_multi = d3
-  .csv("../data/multiline.csv", (d) => {
+  .csv("./data/multiline.csv", (d) => {
     return {
       year: parseDate(d.year),
       sex: d.sex,

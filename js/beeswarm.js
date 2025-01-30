@@ -16,7 +16,7 @@ const innerChart_beeswarm = svg_chart_beeswarm
 // --------------------------------------
 
 const data_beeswarm = d3
-  .csv("../data/data_all.csv", (d) => {
+  .csv("./data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
       Country: d.country,

@@ -16,7 +16,7 @@ const innerChart_heat = svg_heat
 // --------------------------------------
 
 const data_heat = d3
-  .csv("../data/heatmap.csv", (d) => {
+  .csv("./data/heatmap.csv", (d) => {
     return {
       group: d.group,
       variable: d.variable,

@@ -16,7 +16,7 @@ const innerChart_scatterplot_time = svg_scatterplot_time
 // --------------------------------------
 
 const data_scatterplot_time = d3
-  .csv("../data/data_all.csv", (d) => {
+  .csv("./data/data_all.csv", (d) => {
     return {
       Gini: +d.gdiincj992,
       Country: d.country,

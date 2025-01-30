@@ -35,7 +35,7 @@ Id.prototype.toString = function () {
 // --------------------------------------
 
 const data_scatterplot_connected = d3
-  .csv("../data/metros.csv", (d) => {
+  .csv("./data/metros.csv", (d) => {
     return {
       POP_1980: +d.POP_1980,
       POP_2015: +d.POP_2015,
