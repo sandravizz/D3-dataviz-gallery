@@ -8,7 +8,7 @@
 	--razzmatazz: #f20666;
 	--rebecca-purple: #662e9b;
 	--rich-black: #131b26;
-	}
+}
 
 html {
 	font-size: 100%;
@@ -102,6 +102,15 @@ h3 {
 	margin-bottom: 50px;
 	line-height: 1.5;
 	font-size: var(--step--2);
+	letter-spacing: -0.5px;
+	max-width: 600px;
+}
+
+.chart_footer {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	line-height: 1;
+	font-size: var(--step--5);
 	letter-spacing: -0.5px;
 	max-width: 600px;
 }
@@ -219,9 +228,3 @@ h3 {
 #filters button:hover {
 	border-radius: 60px;
 }
-
-
-
-
-  
- 

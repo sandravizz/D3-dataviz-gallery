@@ -36,15 +36,24 @@ const data_linechart_smallmulti = d3
       .scaleLinear()
       .domain(d3.extent(data, (d) => d.year))
       .range([0, width3]);
-
     // console.log(x(2000));
 
     let y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.n)])
       .range([height3, 0]);
-
     // console.log(y(50));
+
+    let names = data.map(d => d.name);
+    console.log("names", names);
+
+    let uniqueNames = [...new Set(names)];
+    console.log("uniqueNames", uniqueNames);
+
+    let c = d3
+      .scaleOrdinal()
+      .domain(["Ashley", "Patricia", "Jessica", "Deborah", "Linda"])
+      .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1E96FC"]);
 
     // --------------------------------------
     //  Axes
@@ -69,7 +78,7 @@ const data_linechart_smallmulti = d3
     svg_linechart_smallmulti
       .append("path")
       .attr("fill", "none")
-      .attr("stroke", "#f20666")
+      .attr("stroke", (d) => c(d[0]))
       .attr("d", (d) =>
         d3
           .line()
@@ -84,5 +93,6 @@ const data_linechart_smallmulti = d3
       .attr("y", 20)
       .attr("x", 0)
       .text((d) => d[0])
-      .style("fill", "#9ef211");
+      .style("fill", "white");
+
   });

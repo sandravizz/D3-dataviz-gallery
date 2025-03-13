@@ -30,7 +30,7 @@ const data_linechart_multi = d3
     // console.log(data);
 
     const sumstat = d3.group(data, (d) => d.name);
-    // console.log(sumstat);
+    console.log("sumstat", sumstat);
 
     // --------------------------------------
     // Scales
@@ -48,13 +48,16 @@ const data_linechart_multi = d3
       .range([innerheight, 0]);
     // console.log(y(50));
 
-    let names = data.map(d => d.names);
-    console.log("names", names)
- 
+    let names = data.map(d => d.name);
+    console.log("names", names);
+
+    let uniqueNames = [...new Set(names)];
+    console.log("uniqueNames", uniqueNames);
+
     let c = d3
       .scaleOrdinal()
-      .domain(["F", "H"])
-      .range(["#06d6a0", "#f20666"]);
+      .domain(["Ashley", "Patricia", "Jessica", "Deborah", "Linda"])
+      .range(["#06d6a0", "#f20666", "#662e9b", "#9EF211", "#1E96FC"]);
 
     // --------------------------------------
     //  Axes
@@ -79,7 +82,7 @@ const data_linechart_multi = d3
       );
 
     // --------------------------------------
-    // Line and area drawing
+    // Line drawing
     // --------------------------------------
 
     innerChart_linechart_multi
@@ -87,11 +90,12 @@ const data_linechart_multi = d3
       .data(sumstat)
       .join("path")
       .attr("fill", "none")
-      .attr("stroke", (d) => c(d.sex))
+      .attr("stroke", (d) => c(d[0]))
       .attr("d", (d) =>
         d3
           .line()
           .x((d) => x(d.year))
           .y((d) => y(d.n))(d[1])
       );
+   
   });
