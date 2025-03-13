@@ -28,14 +28,21 @@
       <!-- Line charts -->
 
       <div>
-        <h3>Line chart (Multi)</h3>
+        <h3>Line chart | multi </h3>
         <p class="chart_title">A line chart for different categories encoded by color.</p>
         <div id="chart_linechart_multi"></div>
         <p class="chart_footer">Source: Inspried by the code from d3-graph-gallery</p>
       </div>
 
+      <!-- <div>
+        <h3>Line chart | annia </h3>
+        <p class="chart_title">Line chart annia</p>
+        <div id="chart_linechart_annia"></div>
+        <p class="chart_footer">Source: Barcelona</p>
+      </div> -->
+
       <div>
-        <h3>Line chart (small multiple)</h3>
+        <h3>Line chart | small multiple</h3>
         <p class="chart_title">
           Having more than four or five categories its recommended 
           to switch from multi_line chart to a small mutliple line chart. 
@@ -44,23 +51,58 @@
         <p class="chart_footer">Source: Inspried by the code from d3-graph-gallery</p>
       </div>
 
+      <!-- Bar charts -->
+
+      <div>
+        <h3>Bar chart</h3>
+        <p class="chart_title">
+         A simple bar chart allows us to see the size - or magnitude - of each category.  
+        </p>
+        <div id="bar_chart"></div>
+        <p class="chart_footer">Source: Inspried by the code from d3-graph-gallery</p>
+      </div>
+
       <!-- <div>
+        <h3>Bar chart | tooltip</h3>
+        <p class="chart_title">
+         Tooltip or detail on demand is one of the most useful interactivity option.
+        </p>
+        <div id="bar_chart2"></div>
+        <p class="chart_footer">Source: Inspried by the code from d3-graph-gallery</p>
+      </div> -->
+
+      <!-- Scatter plots -->
+
+      <div>
         <h3>Scatter plot (connected)</h3>
         <p class="chart_title">
           The connected scatterplot the evolution of two numeric variables from
           one moment in time to another one. In this example from 1980 to 2023.
         </p>
         <div id="chart_scatterplot_connected"></div>
-      </div> -->
+        <p class="chart_footer">Source: Observable notebook</p>
+      </div>
 
-      <!-- <div>
+      <div>
+        <h3>Scatter plot (time)</h3>
+        <p class="chart_title">
+          Two categorial variables wrok really well in this visualisation type.
+          The color can then show another thrid varialbe or the frequency.
+        </p>
+        <div id="filters"></div>
+        <div id="chart_scatterplot_time"></div>
+        <p class="chart_footer">Source: WID data</p>
+      </div>
+
+      <div>
         <h3>Lollipop chart (animated)</h3>
         <p class="chart_title">
           The lollipop chart emphasis the focus on the single data points. This
           chart shows the same data as the area chart above.
         </p>
         <div id="chart_lollipop"></div>
-      </div> -->
+        <p class="chart_footer">Source: WID data</p>
+      </div>
 
       <!-- <div>
         <h3>Heatmap (tooltip)</h3>
@@ -82,23 +124,7 @@
         <div id="chart_area_gradient"></div>
       </div> -->
 
-      <!-- <div>
-        <h3>Scatter plot (time)</h3>
-        <p class="chart_title">
-          Two categorial variables wrok really well in this visualisation type.
-          The color can then show another thrid varialbe or the frequency.
-        </p>
-        <div id="filters"></div>
-        <div id="chart_scatterplot_time"></div>
-      </div> -->
- 
-      <!-- <div>
-        <h3>Stacked bar chart</h3>
-        <p class="chart_title">
-          Population by age and state. Compare to horizontal stacked bars. 
-        </p>
-        <div id="chart_bars_stacked"></div>
-      </div> -->
+
 
       <!-- <div>
           <h3>Arc diagram</h3>
@@ -116,23 +142,32 @@
       </div> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-    <!-- <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script> -->
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
 
-
     <script src="js/global_variables.js"></script>
-    <script src="js/arc_diagram.js"></script>
     <script src="js/multi_line.js"></script>
     <script src="js/small_multiple_line.js"></script>
-    <!-- <script src="js/heatmap.js"></script> -->
-    <script src="js/areachart.js"></script>
+    <script src="js/bar_chart.js"></script> 
     <script src="js/scatterplot_connected.js"></script>
-    <script src="js/lollipop.js"></script>
     <script src="js/timeline_scatterplot.js"></script>
-    <script src="js/beeswarm.js"></script>
-    <script src="js/stacked_barchart.js"></script>
+    <script src="js/lollipop.js"></script>
+    <!-- <script src="js/bar_chart_tooltip.js"></script> -->
 
+
+
+
+
+ 
+
+    <!-- <script src="js/multi_line_annia.js"></script> -->
+    <!-- <script src="js/heatmap.js"></script>
+    <script src="js/areachart.js"></script>
+
+    <script src="js/lollipop.js"></script>
+
+    <script src="js/beeswarm.js"></script>
+    <script src="js/arc_diagram.js"></script> -->
     <!-- <script src="js/d3-sankey.js"></script> -->
     <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
 

@@ -49,10 +49,10 @@ const data_linechart_multi = d3
     // console.log(y(50));
 
     let names = data.map(d => d.name);
-    console.log("names", names);
+    // console.log("names", names);
 
     let uniqueNames = [...new Set(names)];
-    console.log("uniqueNames", uniqueNames);
+    // console.log("uniqueNames", uniqueNames);
 
     let c = d3
       .scaleOrdinal()
@@ -89,6 +89,7 @@ const data_linechart_multi = d3
       .selectAll(".line")
       .data(sumstat)
       .join("path")
+      .attr("class", "line")
       .attr("fill", "none")
       .attr("stroke", (d) => c(d[0]))
       .attr("d", (d) =>

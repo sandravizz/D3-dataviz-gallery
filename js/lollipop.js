@@ -5,11 +5,11 @@
 const svg_lollipop = d3
   .select("#chart_lollipop")
   .append("svg")
-  .attr("viewBox", [0, 0, width2, height2]);
+  .attr("viewBox", [0, 0, width, height]);
 
 const innerChart_lollipop = svg_lollipop
   .append("g")
-  .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+  .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // --------------------------------------
 //  Data loading
@@ -35,12 +35,12 @@ const data_lollipop = d3
     let x = d3
       .scaleTime()
       .domain(d3.extent(data, (d) => d.Year))
-      .range([0, innerwidth2]);
+      .range([0, innerwidth]);
 
     let y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.Gini)])
-      .range([innerheight2, 0]);
+      .range([innerheight, 0]);
 
     let r1 = d3
       .scaleSqrt()
@@ -54,7 +54,7 @@ const data_lollipop = d3
     innerChart_lollipop
       .append("g")
       .attr("class", "x-axis")
-      .attr("transform", `translate(0, ${innerheight2})`)
+      .attr("transform", `translate(0, ${innerheight})`)
       .call(
         d3
           .axisBottom(x)
@@ -85,8 +85,8 @@ const data_lollipop = d3
       .attr("class", "line_lollipop")
       .attr("x1", (d) => x(d.Year))
       .attr("x2", (d) => x(d.Year))
-      .attr("y1", innerheight2)
-      .attr("y2", innerheight2)
+      .attr("y1", innerheight)
+      .attr("y2", innerheight)
       .attr("stroke", "#06D6A0")
       .attr("stroke-width", 1)
       .attr("opacity", 1)

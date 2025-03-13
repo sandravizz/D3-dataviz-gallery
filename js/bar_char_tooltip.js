@@ -2,12 +2,12 @@
 //  Canvas
 // --------------------------------------
 
-const svg5 = d3
-  .select("#chart2")
+const svg_barchart2 = d3
+  .select("#bar_chart2")
   .append("svg")
   .attr("viewBox", [0, 0, width, height]);
 
-const innerChart5 = svg5
+const innerChart_barchart2 = svg_barchart2
   .append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
@@ -15,8 +15,8 @@ const innerChart5 = svg5
 // Data
 // --------------------------------------
 
-const data5 = d3
-  .csv("../data/3.csv", (d) => {
+const data_barchart2 = d3
+  .csv("./data/data_all.csv", (d) => {
     return {
       Gini: +d.value,
       Country: d.country,
@@ -26,8 +26,8 @@ const data5 = d3
       Year: +d.year,
     };
   })
-  .then((data5) => {
-    let data = data5
+  .then((data_raw) => {
+    let data = data_raw
       .filter((d) => d.Year < 1981)
       .sort((a, b) => b.Gini - a.Gini);
 
@@ -37,17 +37,17 @@ const data5 = d3
     // Tooltip
     // --------------------------------------
 
-    const tooltip = d3
-      .tip()
-      .attr("class", "tooltip")
-      .html(
-        (event, d) => `<div> 
-      <b>${d.Name}</b> 
-      <br>Gini ${format6(d.Gini)}</br> 
-      </div>`
-      );
+    // const tooltip = d3
+    //   .tip()
+    //   .attr("class", "tooltip")
+    //   .html(
+    //     (event, d) => `<div> 
+    //   <b>${d.Name}</b> 
+    //   <br>Gini ${format6(d.Gini)}</br> 
+    //   </div>`
+    //   );
 
-    svg5.call(tooltip);
+    //   innerChart_barchart2.call(tooltip);
 
     // --------------------------------------
     // Scales
@@ -66,7 +66,7 @@ const data5 = d3
     // Bars
     // --------------------------------------
 
-    innerChart5
+    innerChart_barchart2
       .selectAll(".bars")
       .data(data)
       .join("rect")
@@ -79,8 +79,8 @@ const data5 = d3
       .attr("opacity", (d) =>
         d.Gini > d3.mean(data, (d) => d.Gini) ? 0.1 : 0.3
       )
-      .on("mouseover", tooltip.show)
-      .on("mouseout", tooltip.hide)
+      // .on("mouseover", tooltip.show)
+      // .on("mouseout", tooltip.hide)
       .transition()
       .duration(5000)
       .attr("width", (d) => x(d.Gini));

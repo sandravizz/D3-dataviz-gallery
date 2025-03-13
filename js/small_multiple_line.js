@@ -45,10 +45,10 @@ const data_linechart_smallmulti = d3
     // console.log(y(50));
 
     let names = data.map(d => d.name);
-    console.log("names", names);
+    // console.log("names", names);
 
     let uniqueNames = [...new Set(names)];
-    console.log("uniqueNames", uniqueNames);
+    // console.log("uniqueNames", uniqueNames);
 
     let c = d3
       .scaleOrdinal()
