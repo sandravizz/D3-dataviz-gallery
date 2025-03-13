@@ -40,15 +40,21 @@ const data_linechart_multi = d3
       .scaleTime()
       .domain(d3.extent(data, (d) => d.year))
       .range([0, innerwidth]);
-
     // console.log(x(2000));
 
     let y = d3
       .scaleLinear()
       .domain([0, d3.max(data, (d) => d.n)])
       .range([innerheight, 0]);
-
     // console.log(y(50));
+
+    let names = data.map(d => d.names);
+    console.log("names", names)
+ 
+    let c = d3
+      .scaleOrdinal()
+      .domain(["F", "H"])
+      .range(["#06d6a0", "#f20666"]);
 
     // --------------------------------------
     //  Axes
@@ -81,7 +87,7 @@ const data_linechart_multi = d3
       .data(sumstat)
       .join("path")
       .attr("fill", "none")
-      .attr("stroke", "#f20666")
+      .attr("stroke", (d) => c(d.sex))
       .attr("d", (d) =>
         d3
           .line()

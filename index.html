@@ -15,8 +15,9 @@
       rel="stylesheet"
     />
   </head>
-
+  
   <body>
+
     <div class="container">
       <h1>One d3.js dataviz page</h1>
       <p class="intro_text">
@@ -25,34 +26,39 @@
       </p>
 
       <div>
+        <h3>Line chart (Multi)</h3>
+        <p class="chart_title">A line chart for different categories.</p>
+        <div id="chart_linechart_multi"></div>
+      </div>
+
+      <!-- <div>
+        <h3>Scatter plot (connected)</h3>
+        <p class="chart_title">
+          The connected scatterplot the evolution of two numeric variables from
+          one moment in time to another one. In this example from 1980 to 2023.
+        </p>
+        <div id="chart_scatterplot_connected"></div>
+      </div> -->
+
+      <!-- <div>
         <h3>Lollipop chart (animated)</h3>
         <p class="chart_title">
           The lollipop chart emphasis the focus on the single data points. This
           chart shows the same data as the area chart above.
         </p>
         <div id="chart_lollipop"></div>
-      </div>
+      </div> -->
 
-      <div>
-        <h3>Scatter plot (connected)</h3>
-        <p class="chart_title">
-          The connected scatterplot the evolution of two numeric variables from
-          one moment in time to another one. In this example from 1980 to 2023.
-        </p>
-        <p class="chart_title"></p>
-        <div id="chart_scatterplot_connected"></div>
-      </div>
-
-      <div>
+      <!-- <div>
         <h3>Heatmap (tooltip)</h3>
         <p class="chart_title">
           Two categorial variables wrok really well in this visualisation type.
           The color can then show another thrid varialbe or the frequency.
         </p>
         <div id="chart_heatmap"></div>
-      </div>
+      </div> -->
 
-      <div>
+      <!-- <div>
         <h3>Area chart (color gradient)</h3>
         <p class="chart_title">
           The area chart is perfect for showing time series data. The gradient
@@ -61,24 +67,9 @@
           1980-2022.
         </p>
         <div id="chart_area_gradient"></div>
-      </div>
+      </div> -->
 
-      <div>
-        <h3>Line chart (Multi)</h3>
-        <p class="chart_title">A line chart for different categories.</p>
-        <div id="chart_linechart_multi"></div>
-      </div>
-
-      <div>
-        <h3>Line chart (small multiple)</h3>
-        <p class="chart_title">
-          The connected scatterplot the evolution of two numeric variables from
-          one moment in time to another one. In this example from 1980 to 2023.
-        </p>
-        <div id="chart_linechart_smallmulti"></div>
-      </div>
-
-      <div>
+      <!-- <div>
         <h3>Scatter plot (time)</h3>
         <p class="chart_title">
           Two categorial variables wrok really well in this visualisation type.
@@ -86,16 +77,33 @@
         </p>
         <div id="filters"></div>
         <div id="chart_scatterplot_time"></div>
-      </div>
-
-      <div>
-        <h3>Arc diagram</h3>
+      </div> -->
+ 
+      <!-- <div>
+        <h3>Stacked bar chart</h3>
         <p class="chart_title">
-          Two categorial variables wrok really well in this visualisation type.
-          The color can then show another thrid varialbe or the frequency.
+          Population by age and state. Compare to horizontal stacked bars. 
         </p>
-        <div id="chart_arc_diagram"></div>
-      </div>
+        <div id="chart_bars_stacked"></div>
+      </div> -->
+
+      <!-- <div>
+        <h3>Line chart (small multiple)</h3>
+        <p class="chart_title">
+          The connected scatterplot the evolution of two numeric variables from
+          one moment in time to another one. In this example from 1980 to 2023.
+        </p>
+        <div id="chart_linechart_smallmulti"></div>
+      </div> -->
+
+      <!-- <div>
+          <h3>Arc diagram</h3>
+          <p class="chart_title">
+            Two categorial variables wrok really well in this visualisation type.
+            The color can then show another thrid varialbe or the frequency.
+          </p>
+          <div id="chart_arc_diagram"></div>
+      </div> -->
 
       <!-- <div>
         <h3>Beeswarm</h3>
@@ -103,12 +111,13 @@
         <div id="chart_beeswarm"></div>
       </div> -->
 
-    <!-- <script src="js/d3-sankey.js"></script> -->
-    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
     <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
     <script src="https://unpkg.com/d3-v6-tip@1.0.6/build/d3-v6-tip.js"></script>
+
+
     <script src="js/global_variables.js"></script>
     <script src="js/arc_diagram.js"></script>
     <script src="js/multi_line.js"></script>
@@ -119,7 +128,10 @@
     <script src="js/lollipop.js"></script>
     <script src="js/timeline_scatterplot.js"></script>
     <script src="js/beeswarm.js"></script>
-    <!-- <script src="js/scatterplot1.js"></script> -->
+    <script src="js/stacked_barchart.js"></script>
+
+    <!-- <script src="js/d3-sankey.js"></script> -->
+    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
 
   </body>
 </html>
