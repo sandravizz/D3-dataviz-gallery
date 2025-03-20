@@ -30,3 +30,14 @@ const format6 = d3.format(".0");
 
 const parseDate = d3.timeParse("%Y");
 const formatDate = d3.timeFormat("%Y");
+
+// --------------------------------------
+//  Legend data 
+// --------------------------------------
+
+const formatsInfo = [
+    {id: "El_Masnou", label: "El_Masnou", color: "#06d6a0"},
+    {id: "Premia_Mar", label: "Premia_Mar", color: "#f20666"},
+    {id: "Vilassarde_Mar", label: "Vilassarde_Mar", color: "#662e9b"}
+  ];
+
